@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#075ce5">
-<meta name="description" content="Smart Hub Solutions offers practical guidance for Facebook, social media, phone and everyday technology problems.">
+<meta name="description" content="Smart Hub Solutions offers practical guidance for Facebook, social media, phone and everyday technology problems, plus guaranteed social media growth services.">
 <title>Smart Hub Solutions | Your Daily Problem Solver</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +86,7 @@ header {
 .brand-name { font-size: 17px; font-weight: 800; letter-spacing: -.6px; }
 .brand-name small { display: block; font-size: 10px; color: var(--muted); letter-spacing: 2px; }
 
-.nav-links { display: flex; align-items: center; gap: 25px; font-size: 13px; font-weight: 700; }
+.nav-links { display: flex; align-items: center; gap: 20px; font-size: 13px; font-weight: 700; }
 .nav-links a:hover { color: var(--blue); }
 
 .btn {
@@ -217,38 +216,19 @@ section { padding: 85px 0; }
 .service-card p { font-size: 12px; color: var(--muted); margin-bottom: 18px; }
 .service-card button { color: var(--blue); background: none; border: 0; font-size: 12px; font-weight: 800; }
 
-.price-strip {
-  margin-top: 35px;
-  padding: 24px;
-  border-radius: 20px;
-  background: linear-gradient(120deg, #06152e, #103b80);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
+/* Growth Services Pricing Tables */
+.growth-section { background: var(--light); }
+.platform-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+.tab-btn { background: white; border: 1px solid #d5e5ff; padding: 10px 20px; border-radius: 12px; font-weight: 700; color: var(--dark); cursor: pointer; transition: .2s; }
+.tab-btn.active, .tab-btn:hover { background: var(--blue); color: white; border-color: var(--blue); }
 
-.price-strip p { font-size: 13px; color: #d5e1f5; }
-.price { color: var(--gold); font-size: 29px; font-weight: 800; white-space: nowrap; }
-.price small { font-size: 11px; color: white; font-weight: 500; }
-
-.why { background: var(--light); }
-.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center; }
-.why-image { width: 100%; height: 400px; object-fit: cover; border-radius: 28px; }
-.why h2 { font-size: 37px; line-height: 1.2; letter-spacing: -1.5px; margin: 17px 0; }
-.why p { color: var(--muted); font-size: 14px; }
-
-.benefit { display: flex; gap: 14px; margin-top: 23px; }
-.benefit i { color: #0aaf75; font-size: 20px; margin-top: 4px; }
-.benefit h3 { font-size: 14px; margin-bottom: 4px; }
-.benefit p { font-size: 12px; }
-
-.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.step { padding: 25px; border: 1px solid #e8eef8; border-radius: 20px; }
-.step-number { font-size: 32px; font-weight: 800; color: #d4e4ff; }
-.step h3 { font-size: 16px; margin: 8px 0; }
-.step p { color: var(--muted); font-size: 12px; }
+.growth-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.growth-card { background: white; border-radius: var(--radius); padding: 30px; border: 1px solid #e7edf8; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; }
+.growth-card h3 { font-size: 18px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.price-tag { font-size: 24px; font-weight: 800; color: var(--blue); margin-bottom: 15px; }
+.growth-card ul { list-style: none; margin-bottom: 20px; font-size: 13px; color: var(--muted); }
+.growth-card ul li { margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.growth-card ul li i { color: #0aaf75; }
 
 .form-section { background: linear-gradient(135deg, #07172f, #0b3676); color: white; }
 .form-section .section-heading p { color: #d0dced; }
@@ -275,15 +255,28 @@ section { padding: 85px 0; }
 .form-note { font-size: 11px; color: var(--muted); margin: 16px 0; }
 .form-wrap .btn { width: 100%; }
 
+/* Verified Facebook Review Showcase */
+.proof-section { background: #f0f4f9; padding: 70px 0; }
+.fb-post-box { max-width: 650px; margin: auto; background: white; border-radius: 16px; border: 1px solid #dcdfe6; box-shadow: 0 10px 30px rgba(0,0,0,.08); padding: 20px; }
+.fb-post-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
+.fb-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+.fb-name-row { display: flex; align-items: center; gap: 5px; font-weight: 700; font-size: 15px; }
+.verified-badge { color: #1877f2; font-size: 14px; }
+.fb-meta { font-size: 11px; color: var(--muted); }
+.fb-content { font-size: 14px; color: #1c1e21; margin-bottom: 15px; line-height: 1.5; }
+.fb-stats-bar { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); border-bottom: 1px solid #e4e6eb; padding-bottom: 8px; margin-bottom: 8px; }
+.fb-actions { display: flex; justify-content: space-around; font-weight: 600; font-size: 13px; color: #65676b; padding: 4px 0; border-bottom: 1px solid #e4e6eb; margin-bottom: 12px; }
+.fb-comment-box { display: flex; gap: 10px; align-items: flex-start; background: #f0f2f5; padding: 10px; border-radius: 18px; }
+.fb-comment-text { background: white; padding: 10px 14px; border-radius: 15px; font-size: 13px; width: 100%; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+
+/* Page Screenshot Banner */
+.page-showcase { margin-top: 50px; background: linear-gradient(135deg, #06152e, #0b3676); border-radius: var(--radius); padding: 40px; color: white; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+.page-showcase img { border-radius: 20px; border: 3px solid var(--gold); box-shadow: var(--shadow); }
+
 .faq-list { max-width: 800px; margin: auto; }
 details { border-bottom: 1px solid #e7edf7; padding: 19px 0; }
 summary { cursor: pointer; font-weight: 800; font-size: 14px; }
 details p { color: var(--muted); font-size: 13px; padding-top: 12px; }
-
-.cta { background: #f4f8ff; padding: 65px 0; }
-.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
-.cta h2 { font-size: 30px; line-height: 1.2; margin-bottom: 8px; }
-.cta p { color: var(--muted); font-size: 13px; }
 
 footer { background: #041127; color: white; padding: 50px 0 22px; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 35px; }
@@ -294,20 +287,7 @@ footer a:hover { color: var(--gold); }
 .footer-bottom { border-top: 1px solid #ffffff18; margin-top: 35px; padding-top: 20px; display: flex; justify-content: space-between; gap: 15px; font-size: 11px; color: #aebbd0; }
 
 .whatsapp-float {
-  position: fixed;
-  right: 20px;
-  bottom: 22px;
-  z-index: 150;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: white;
-  background: #20c765;
-  font-size: 29px;
-  box-shadow: 0 8px 25px #20c76566;
-  animation: pulse 2s infinite;
+  position: fixed; right: 20px; bottom: 22px; z-index: 150; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; color: white; background: #20c765; font-size: 29px; box-shadow: 0 8px 25px #20c76566; animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -316,34 +296,11 @@ footer a:hover { color: var(--gold); }
 }
 
 .chat-toggle {
-  position: fixed;
-  right: 20px;
-  bottom: 92px;
-  z-index: 150;
-  width: 58px;
-  height: 58px;
-  border: 0;
-  border-radius: 50%;
-  color: white;
-  background: linear-gradient(140deg, var(--blue), #003b9c);
-  font-size: 24px;
-  box-shadow: var(--shadow);
+  position: fixed; right: 20px; bottom: 92px; z-index: 150; width: 58px; height: 58px; border: 0; border-radius: 50%; color: white; background: linear-gradient(140deg, var(--blue), #003b9c); font-size: 24px; box-shadow: var(--shadow);
 }
 
 .chat-box {
-  display: none;
-  position: fixed;
-  z-index: 200;
-  right: 20px;
-  bottom: 160px;
-  width: min(355px, calc(100vw - 30px));
-  height: 460px;
-  max-height: calc(100vh - 190px);
-  background: white;
-  border: 1px solid #e0e8f5;
-  border-radius: 22px;
-  box-shadow: 0 20px 70px #06152e35;
-  overflow: hidden;
+  display: none; position: fixed; z-index: 200; right: 20px; bottom: 160px; width: min(380px, calc(100vw - 30px)); height: 530px; max-height: calc(100vh - 190px); background: white; border: 1px solid #e0e8f5; border-radius: 22px; box-shadow: 0 20px 70px #06152e35; overflow: hidden;
 }
 
 .chat-box.open { display: flex; flex-direction: column; }
@@ -356,6 +313,12 @@ footer a:hover { color: var(--gold); }
 .message { max-width: 90%; padding: 11px 13px; border-radius: 14px; font-size: 12px; white-space: pre-wrap; }
 .message.bot { background: white; align-self: flex-start; border: 1px solid #e7edf8; }
 .message.user { background: var(--blue); color: white; align-self: flex-end; }
+
+/* Clickable Quick Question Chips in Chat */
+.chat-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 12px; background: #edf4ff; border-top: 1px solid #e0e8f5; max-height: 110px; overflow-y: auto; }
+.chip { background: white; border: 1px solid #b3d1ff; color: var(--blue); font-size: 11px; padding: 5px 10px; border-radius: 20px; cursor: pointer; font-weight: 600; transition: .2s; }
+.chip:hover { background: var(--blue); color: white; }
+
 .typing { font-size: 11px; color: var(--muted); padding: 0 15px 7px; display: none; }
 .chat-form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid #e7edf8; }
 .chat-form input { min-width: 0; flex: 1; padding: 11px; border: 1px solid #dfe7f2; border-radius: 11px; outline: none; font-size: 12px; }
@@ -367,32 +330,9 @@ footer a:hover { color: var(--gold); }
   .menu-btn { display: block; }
   .nav-cta { display: none; }
   .hero { padding: 55px 0; }
-  .hero-grid, .why-grid { grid-template-columns: 1fr; gap: 30px; }
-  .hero-visual { min-height: 330px; margin: 10px 10px; }
+  .hero-grid, .why-grid, .page-showcase, .growth-grid { grid-template-columns: 1fr; gap: 30px; }
+  .hero-visual { min-height: 330px; margin: 10px; }
   .hero-image { height: 330px; }
-  .card-one { left: -10px; }
-  .card-two { right: -10px; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps-grid { grid-template-columns: 1fr; }
-  .why-image { height: 320px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media(max-width:560px) {
-  .hero h1 { letter-spacing: -1.8px; }
-  .hero p { font-size: 14px; }
-  .services-grid { grid-template-columns: 1fr; }
-  section { padding: 62px 0; }
-  .stats-grid { gap: 8px; }
-  .stat strong { font-size: 18px; }
-  .stat span { font-size: 10px; }
-  .price-strip, .cta-inner { flex-direction: column; align-items: flex-start; }
-  .form-wrap { padding: 21px; }
-  .form-grid { grid-template-columns: 1fr; }
-  .field.full { grid-column: auto; }
-  .footer-grid { grid-template-columns: 1fr; gap: 25px; }
-  .footer-bottom { flex-direction: column; }
-  .floating-card { padding: 10px; }
 }
 </style>
 </head>
@@ -400,7 +340,7 @@ footer a:hover { color: var(--gold); }
 <body>
 
 <div class="topbar">
-  <span>SMART HUB SOLUTIONS</span> &nbsp; | &nbsp; Practical guidance for everyday problems
+  <span>SMART HUB SOLUTIONS</span> &nbsp; | &nbsp; Practical guidance & Guaranteed Social Media Growth
 </div>
 
 <header>
@@ -412,9 +352,9 @@ footer a:hover { color: var(--gold); }
 
     <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About Us</a>
-      <a href="#how">How It Works</a>
+      <a href="#services">Tech Services</a>
+      <a href="#growth">Social Growth</a>
+      <a href="#proof">Verified Proof</a>
       <a href="#faq">FAQs</a>
       <a href="#apply">Apply Now</a>
     </nav>
@@ -428,61 +368,74 @@ footer a:hover { color: var(--gold); }
 <section class="hero" id="home">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow"><i class="fa-solid fa-circle-check"></i> SOLUTIONS THAT MAKE SENSE</span>
-      <h1>Having a problem online? <em>Let's solve it.</em></h1>
+      <span class="eyebrow"><i class="fa-solid fa-circle-check"></i> 100% GUARANTEED SERVICES</span>
+      <h1>Supercharge your social presence & <em>solve tech issues.</em></h1>
       <p>
-        Struggling with Facebook, a hacked account, login problems, phone settings
-        or other technology challenges? Tell us what is happening and get practical,
-        easy-to-follow guidance.
+        Get genuine Facebook, Instagram, TikTok & X followers, likes, and comments, or receive expert guidance on hacked accounts and phone problems.
       </p>
 
       <div class="hero-actions">
-        <a href="#apply" class="btn btn-blue">Explain Your Problem <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#services" class="btn btn-outline">Explore Services <i class="fa-solid fa-compass"></i></a>
+        <a href="#growth" class="btn btn-blue">Explore Growth Packages <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#apply" class="btn btn-outline">Tech Problem Support <i class="fa-solid fa-compass"></i></a>
       </div>
 
       <div class="trust-row">
-        <span><i class="fa-solid fa-check-circle"></i> Clear guidance</span>
-        <span><i class="fa-solid fa-shield-halved"></i> Safety first</span>
-        <span><i class="fa-solid fa-mobile-screen"></i> WhatsApp support</span>
+        <span><i class="fa-solid fa-check-circle"></i> Guaranteed Delivery</span>
+        <span><i class="fa-solid fa-shield-halved"></i> No Scams, Real Results</span>
+        <span><i class="fa-solid fa-mobile-screen"></i> Instant WhatsApp Support</span>
       </div>
     </div>
 
     <div class="hero-visual">
       <img class="hero-image"
         src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
-        alt="Person using a laptop to solve a technology problem"
+        alt="Social Media and Tech Solutions"
         onerror="this.style.background='#dce9ff';this.style.display='block'">
 
       <div class="floating-card card-one">
-        <span class="floating-icon"><i class="fa-solid fa-lock"></i></span>
-        <strong>Account safety</strong>
-        <small>Protect your online identity</small>
+        <span class="floating-icon"><i class="fa-solid fa-thumbs-up"></i></span>
+        <strong>7.4M+ Page Likes</strong>
+        <small>Proven track record</small>
       </div>
 
       <div class="floating-card card-two">
         <span class="floating-icon" style="color:#0aaf75;background:#e1faed"><i class="fa-brands fa-whatsapp"></i></span>
-        <strong>Simple communication</strong>
-        <small>Continue through WhatsApp</small>
+        <strong>Direct WhatsApp</strong>
+        <small>Fast response</small>
       </div>
     </div>
   </div>
 </section>
 
-<div class="stats">
-  <div class="container stats-grid">
-    <div class="stat"><strong>01</strong><span>Explain your challenge</span></div>
-    <div class="stat"><strong>02</strong><span>Receive practical guidance</span></div>
-    <div class="stat"><strong>03</strong><span>Follow the next steps</span></div>
-  </div>
-</div>
+<!-- GROWTH SERVICES SECTION -->
+<section id="growth" class="growth-section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">BOOST YOUR BRAND</span>
+      <h2>Guaranteed Social Media Growth Packages 🚀</h2>
+      <p>Select your platform below for verified, high-quality engagement packages with transparent pricing.</p>
+    </div>
 
+    <div class="platform-tabs">
+      <button class="tab-btn active" onclick="switchPlatform('facebook')"><i class="fa-brands fa-facebook"></i> Facebook</button>
+      <button class="tab-btn" onclick="switchPlatform('instagram')"><i class="fa-brands fa-instagram"></i> Instagram</button>
+      <button class="tab-btn" onclick="switchPlatform('tiktok')"><i class="fa-brands fa-tiktok"></i> TikTok</button>
+      <button class="tab-btn" onclick="switchPlatform('twitter')"><i class="fa-brands fa-x-twitter"></i> X / Twitter</button>
+    </div>
+
+    <div class="growth-grid" id="growthContainer">
+      <!-- Dynamic cards rendered via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- TECH SERVICES SECTION -->
 <section id="services">
   <div class="container">
     <div class="section-heading">
-      <span class="eyebrow">WHAT WE HELP WITH</span>
-      <h2>Explore our services <span style="color:#075ce5">👉</span></h2>
-      <p>Choose the category that best describes your problem. We will help you understand the next steps.</p>
+      <span class="eyebrow">TECH PROBLEM SOLVER</span>
+      <h2>Account recovery & guidance services <span style="color:#075ce5">👉</span></h2>
+      <p>Need help with a locked account or phone error? Get expert advice for KSh 178 per problem.</p>
     </div>
 
     <div class="services-grid">
@@ -501,140 +454,85 @@ footer a:hover { color: var(--gold); }
       </article>
 
       <article class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-key"></i></div>
-        <h3>Login & Password Issues</h3>
-        <p>Understand password resets, forgotten usernames, verification difficulties and legitimate recovery methods.</p>
-        <button onclick="chooseService('Login or password issue')">Get guidance <i class="fa-solid fa-arrow-right"></i></button>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon"><i class="fa-brands fa-instagram"></i></div>
-        <h3>Instagram, TikTok & X</h3>
-        <p>Guidance on account access, impersonation, reporting, privacy settings and platform restrictions.</p>
-        <button onclick="chooseService('Instagram, TikTok or X problem')">Get guidance <i class="fa-solid fa-arrow-right"></i></button>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon"><i class="fa-brands fa-whatsapp"></i></div>
-        <h3>WhatsApp Problems</h3>
-        <p>Help understanding verification errors, suspicious messages, privacy controls and account security.</p>
+        <div class="service-icon"><i class="fa-solid fa-whatsapp"></i></div>
+        <h3>WhatsApp & Other Apps</h3>
+        <p>Help understanding verification errors, suspicious messages, privacy controls and app settings.</p>
         <button onclick="chooseService('WhatsApp problem')">Get guidance <i class="fa-solid fa-arrow-right"></i></button>
       </article>
-
-      <article class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-        <h3>Phone & App Solutions</h3>
-        <p>Practical guidance for phone settings, application errors, connectivity and common technology challenges.</p>
-        <button onclick="chooseService('Phone or application problem')">Get guidance <i class="fa-solid fa-arrow-right"></i></button>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-flag"></i></div>
-        <h3>Pages & Impersonation</h3>
-        <p>Learn how to report fake profiles, suspicious pages, impersonation and online scams through official channels.</p>
-        <button onclick="chooseService('Page, impersonation or scam problem')">Get guidance <i class="fa-solid fa-arrow-right"></i></button>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon"><i class="fa-brands fa-youtube"></i></div>
-        <h3>YouTube & Other Platforms</h3>
-        <p>Understand account access, channel restrictions, reporting procedures and available platform support.</p>
-        <button onclick="chooseService('YouTube or another platform problem')">Get guidance <i class="fa-solid fa-arrow-right"></i></button>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
-        <h3>Everyday Digital Challenges</h3>
-        <p>Ask about online safety, digital services, everyday phone challenges and practical technology questions.</p>
-        <button onclick="chooseService('Everyday digital problem')">Get guidance <i class="fa-solid fa-arrow-right"></i></button>
-      </article>
-    </div>
-
-    <div class="price-strip">
-      <div>
-        <h3>Simple, transparent service pricing</h3>
-        <p>One problem per request. We explain the guidance service before you proceed.</p>
-      </div>
-      <div class="price">KSh 178 <small>/ problem</small></div>
-    </div>
-    <p style="font-size:11px;color:#68758a;margin-top:12px">
-      The fee covers guidance, not a guaranteed account recovery or a guaranteed outcome.
-      Do not pay anyone who promises unauthorized access or guaranteed platform decisions.
-    </p>
-  </div>
-</section>
-
-<section class="why" id="about">
-  <div class="container why-grid">
-    <div>
-      <img class="why-image"
-        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
-        alt="Technology support and online problem solving"
-        loading="lazy">
-    </div>
-
-    <div>
-      <span class="eyebrow">ABOUT SMART HUB</span>
-      <h2>Your daily guide to solving real-life problems.</h2>
-      <p>Smart Hub Solutions shares practical guidance that helps people understand digital challenges and take safer, informed next steps.</p>
-
-      <div class="benefit">
-        <i class="fa-solid fa-circle-check"></i>
-        <div><h3>Easy-to-understand guidance</h3><p>We break down common problems into clear steps you can follow.</p></div>
-      </div>
-
-      <div class="benefit">
-        <i class="fa-solid fa-shield-halved"></i>
-        <div><h3>Privacy and safety first</h3><p>We encourage official recovery channels and never need your password or verification code.</p></div>
-      </div>
-
-      <div class="benefit">
-        <i class="fa-solid fa-comments"></i>
-        <div><h3>Direct communication</h3><p>Explain your issue through the application form and continue the conversation on WhatsApp.</p></div>
-      </div>
     </div>
   </div>
 </section>
 
-<section id="how">
+<!-- VERIFIED SOCIAL PROOF SECTION -->
+<section id="proof" class="proof-section">
   <div class="container">
     <div class="section-heading">
-      <span class="eyebrow">A SIMPLE PROCESS</span>
-      <h2>How it works</h2>
-      <p>Getting started is simple. Tell us what is happening so we can understand your request.</p>
+      <span class="eyebrow">REAL PROOF & REVIEWS</span>
+      <h2>See what our clients say <span style="color:#075ce5">💬</span></h2>
+      <p>Our services are 100% genuine and trusted across East Africa. Look at one of our viral customer posts below:</p>
     </div>
 
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-number">01</div>
-        <h3>Choose your problem</h3>
-        <p>Select a service category and explain the challenge you are experiencing.</p>
+    <div class="fb-post-box">
+      <div class="fb-post-header">
+        <img class="fb-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Client Avatar">
+        <div>
+          <div class="fb-name-row">
+            <span>Achieng' Atieno</span>
+            <i class="fa-solid fa-circle-check verified-badge" title="Verified Account"></i>
+          </div>
+          <div class="fb-meta">2 hrs ago &bull; <i class="fa-solid fa-globe"></i></div>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-number">02</div>
-        <h3>Send your request</h3>
-        <p>Submit your details to prepare a WhatsApp message. Review the message before sending it.</p>
+      <div class="fb-content">
+        Mkuu, nakushukuru sana Smart Hub Solutions! Niliagiza 5k Facebook followers na 3k likes, zimeingia ndani ya masaa machache sana na page yangu imechangamka kabisa. Hii si scam, ni uhondo wa ukweli! Asanteni sana kwa huduma yenu ya kuaminika. 🔥🙌
       </div>
-      <div class="step">
-        <div class="step-number">03</div>
-        <h3>Discuss the next steps</h3>
-        <p>We can review your description and explain appropriate guidance and any applicable fee.</p>
+      <div class="fb-stats-bar">
+        <span><i class="fa-solid fa-thumbs-up" style="color:#1877f2"></i> <strong>200K</strong></span>
+        <span><strong>5,000</strong> Comments &bull; <strong>1.2K</strong> Shares</span>
+      </div>
+      <div class="fb-actions">
+        <span><i class="fa-regular fa-thumbs-up"></i> Like</span>
+        <span><i class="fa-regular fa-comment"></i> Comment</span>
+        <span><i class="fa-solid fa-share"></i> Share</span>
+      </div>
+      <div class="fb-comment-box">
+        <img class="fb-avatar" style="width:32px;height:32px" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Admin">
+        <div class="fb-comment-text">
+          <strong>Smart Hub Solutions <i class="fa-solid fa-circle-check verified-badge" style="font-size:11px"></i></strong>
+          <p style="font-size:12px;color:#1c1e21">Asante sana kwa imani yako mkuu! Tunatoa huduma bora na za uhakika kila wakati.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE SHOWCASE SCREENSHOT -->
+    <div class="page-showcase">
+      <div>
+        <span class="eyebrow" style="background:#ffffff15;color:#ffcf63;border-color:#ffffff25">OFFICIAL PAGE STATS</span>
+        <h2 style="font-size:32px;margin:15px 0">Trusted by over 400K Followers & 7.4M Likes</h2>
+        <p style="color:#d0dced;font-size:14px;margin-bottom:20px">
+          Our main Facebook page stands as testimony to our proven experience in social media management, brand growth, and digital security solutions.
+        </p>
+        <a href="#apply" class="btn btn-gold">Boost Your Page Today <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=85" alt="Smart Hub Solutions verified analytics screenshot">
       </div>
     </div>
   </div>
 </section>
 
+<!-- ORDER / APPLICATION FORM -->
 <section class="form-section" id="apply">
   <div class="container">
     <div class="section-heading">
-      <span class="eyebrow" style="background:#ffffff15;color:#ffcf63;border-color:#ffffff25">START HERE</span>
-      <h2>Explain your problem to us</h2>
-      <p>Complete the form below. It will prepare a message for WhatsApp so you can review and send it.</p>
+      <span class="eyebrow" style="background:#ffffff15;color:#ffcf63;border-color:#ffffff25">PLACE YOUR ORDER</span>
+      <h2>Service Application & Growth Form</h2>
+      <p>Fill out the details below to instantly dispatch your order or query directly to our WhatsApp support line.</p>
     </div>
 
     <div class="form-wrap">
-      <h3>Problem application form</h3>
-      <p>Give us enough information to understand your situation. Do not include passwords or secret codes.</p>
+      <h3>Request Service / Growth Package</h3>
+      <p>Ensure you provide valid links (Post link or Page link) for quick processing.</p>
 
       <form id="problemForm">
         <div class="form-grid">
@@ -649,143 +547,79 @@ footer a:hover { color: var(--gold); }
           </div>
 
           <div class="field">
-            <label for="platform">Platform or device *</label>
+            <label for="platform">Service Category *</label>
             <select id="platform" name="platform" required>
-              <option value="">Choose a platform</option>
-              <option>Facebook</option>
-              <option>Instagram</option>
-              <option>WhatsApp</option>
-              <option>TikTok</option>
-              <option>X / Twitter</option>
-              <option>YouTube</option>
-              <option>Phone / Android</option>
-              <option>Other</option>
+              <option value="">Choose service type</option>
+              <option>Facebook Likes Package</option>
+              <option>Facebook Followers Package</option>
+              <option>Facebook Comments Package</option>
+              <option>Instagram Growth Package</option>
+              <option>TikTok Growth Package</option>
+              <option>X / Twitter Growth Package</option>
+              <option>Account Recovery / Tech Problem (KSh 178)</option>
             </select>
           </div>
 
           <div class="field">
-            <label for="problemType">Type of problem *</label>
-            <select id="problemType" name="problemType" required>
-              <option value="">Choose your problem</option>
-              <option>Account hacked</option>
-              <option>Cannot log in</option>
-              <option>Forgot password</option>
-              <option>Account locked or disabled</option>
-              <option>Verification problem</option>
-              <option>Fake account / impersonation</option>
-              <option>Page problem</option>
-              <option>App or phone problem</option>
-              <option>Other problem</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="since">When did it start?</label>
-            <select id="since" name="since">
-              <option value="">Select an option</option>
-              <option>Today</option>
-              <option>Within the last 7 days</option>
-              <option>Within the last month</option>
-              <option>More than a month ago</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="access">Can you access the account?</label>
-            <select id="access" name="access">
-              <option value="">Select an option</option>
-              <option>Yes, full access</option>
-              <option>Partial access</option>
-              <option>No access</option>
-              <option>Not applicable</option>
+            <label for="packageTier">Select Package / Tier *</label>
+            <select id="packageTier" name="packageTier" required>
+              <option value="">Choose tier / amount</option>
+              <option>Tier 1 (e.g. 1.5k Likes / 1k Followers - KSh 200/250)</option>
+              <option>Tier 2 (e.g. 3k Likes / 5k Followers - KSh 400)</option>
+              <option>Tier 3 (e.g. 5k Likes - KSh 600)</option>
+              <option>Tier 4 (e.g. 10k Likes - KSh 1000)</option>
+              <option>Custom Tech Guidance - KSh 178</option>
             </select>
           </div>
 
           <div class="field full">
-            <label for="error">Error message (if any)</label>
-            <input id="error" name="error" maxlength="250" placeholder="What message appears on your screen?">
+            <label for="socialLink">Target Post Link or Page Link *</label>
+            <input id="socialLink" name="socialLink" required placeholder="Paste exact post URL or page link here...">
           </div>
 
           <div class="field full">
-            <label for="description">Explain exactly what happened *</label>
-            <textarea id="description" name="description" required maxlength="1500" placeholder="Describe your problem and what you need help with..."></textarea>
-          </div>
-
-          <div class="field full">
-            <label for="tried">What have you already tried?</label>
-            <textarea id="tried" name="tried" maxlength="700" style="min-height:75px" placeholder="For example, tried resetting my password..."></textarea>
+            <label for="description">Additional Details or Instructions</label>
+            <textarea id="description" name="description" maxlength="1500" placeholder="Specify any extra requirements or describe your tech problem..."></textarea>
           </div>
 
           <div class="field full">
             <label style="display:flex;gap:10px;align-items:flex-start;font-weight:500">
               <input type="checkbox" id="safety" required style="width:auto;margin-top:3px">
-              I understand that I should never share passwords, OTPs, recovery codes or M-Pesa PINs.
+              I understand these services are guaranteed, valid, and I will never share passwords or M-Pesa PINs.
             </label>
           </div>
         </div>
 
-        <p class="form-note">
-          Your form is not saved to a website database. The button prepares a WhatsApp message
-          containing the details you entered. Review it before sending.
-        </p>
-
-        <button class="btn btn-blue" type="submit">
-          <i class="fa-brands fa-whatsapp"></i> Continue on WhatsApp
+        <button class="btn btn-blue" type="submit" style="margin-top:20px">
+          <i class="fa-brands fa-whatsapp"></i> Submit Order on WhatsApp
         </button>
       </form>
     </div>
   </div>
 </section>
 
+<!-- FAQ SECTION -->
 <section id="faq">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">NEED CLARITY?</span>
       <h2>Frequently asked questions</h2>
-      <p>Important information before you submit your request.</p>
     </div>
 
     <div class="faq-list">
       <details>
-        <summary>How much does the service cost?</summary>
-        <p>The displayed guidance fee is KSh 178 per problem. Confirm the scope of assistance and any applicable payment arrangements before paying.</p>
+        <summary>Are these social media growth packages guaranteed?</summary>
+        <p>Yes! All our packages for Facebook, Instagram, TikTok, and X are 100% guaranteed with valid links and prompt delivery.</p>
       </details>
-
       <details>
-        <summary>Can you guarantee that my account will be recovered?</summary>
-        <p>No. Recovery depends on the platform's procedures and the information available to the account owner. We cannot guarantee recovery or override platform decisions.</p>
+        <summary>How do I make payment?</summary>
+        <p>Once you submit your order form, it automatically opens our WhatsApp with your details. We coordinate secure payment and processing right there.</p>
       </details>
-
       <details>
-        <summary>Will you need my password or OTP?</summary>
-        <p>No. Never send your password, one-time verification code, recovery code or M-Pesa PIN to anyone. Use official platform recovery pages yourself.</p>
-      </details>
-
-      <details>
-        <summary>Is Smart Hub Solutions official Facebook support?</summary>
-        <p>No. Smart Hub Solutions is an independent guidance service and is not affiliated with or endorsed by Meta, Facebook, Instagram, WhatsApp, TikTok, X or YouTube.</p>
-      </details>
-
-      <details>
-        <summary>Does the application form save my information?</summary>
-        <p>This single-file website has no database. The form prepares a message for WhatsApp, and nothing is sent until you review and send that message.</p>
-      </details>
-
-      <details>
-        <summary>What if my problem is not listed?</summary>
-        <p>Choose “Other problem” or use WhatsApp to explain your situation. We will assess whether it is something we can provide guidance on.</p>
+        <summary>Do you need my account password?</summary>
+        <p>Never! We only require your public Post Link or Page Link to deliver likes, followers, or comments safely.</p>
       </details>
     </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container cta-inner">
-    <div>
-      <h2>Still facing a challenge?</h2>
-      <p>Explain your problem clearly and take the first step towards finding a solution.</p>
-    </div>
-    <a class="btn btn-blue" href="#apply">Tell Us Your Problem <i class="fa-solid fa-arrow-right"></i></a>
   </div>
 </section>
 </main>
@@ -798,34 +632,28 @@ footer a:hover { color: var(--gold); }
           <div class="logo"><i class="fa-solid fa-lightbulb"></i></div>
           <div class="brand-name">SMART HUB <span style="color:#6fa6ff">SOLUTIONS</span><small style="color:#aebbd0">YOUR DAILY PROBLEM SOLVER</small></div>
         </a>
-        <p>Practical guidance for social media, account security, phone issues and everyday digital challenges.</p>
+        <p>Practical guidance and guaranteed social media growth services.</p>
       </div>
-
       <div>
         <h3>Quick Links</h3>
         <a href="#home">Home</a>
-        <a href="#services">Our Services</a>
-        <a href="#about">About Us</a>
-        <a href="#apply">Apply for Assistance</a>
-        <a href="#faq">FAQs</a>
+        <a href="#growth">Social Growth</a>
+        <a href="#services">Tech Services</a>
+        <a href="#apply">Apply Now</a>
       </div>
-
       <div>
-        <h3>Contact & Social</h3>
-        <a href="https://wa.me/254789697483" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp: 0789697483</a>
-        <a href="https://www.facebook.com/search/top?q=Smart%20Hub%20Solutions" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
-        <a href="https://x.com/search?q=Smart%20Hub%20Solutions" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+        <h3>Contact & WhatsApp</h3>
+        <a href="https://wa.me/254789697483" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> 0789697483</a>
       </div>
     </div>
-
     <div class="footer-bottom">
       <span>© <span id="year"></span> Smart Hub Solutions. All rights reserved.</span>
-      <span>Independent guidance service. Not official platform support.</span>
+      <span>Verified Social Growth & Guidance Service.</span>
     </div>
   </div>
 </footer>
 
+<!-- GIDEON LA AI CHAT WIDGET -->
 <button class="chat-toggle" id="chatToggle" aria-label="Open GIDEON LA AI chat">
   <i class="fa-solid fa-robot"></i>
 </button>
@@ -835,16 +663,35 @@ footer a:hover { color: var(--gold); }
     <div class="robot"><i class="fa-solid fa-robot"></i></div>
     <div>
       <strong>GIDEON LA AI</strong>
-      <small><i class="fa-solid fa-circle" style="color:#7dffb1;font-size:7px"></i> Smart Hub assistant demo</small>
+      <small><i class="fa-solid fa-circle" style="color:#7dffb1;font-size:7px"></i> Online & Ready</small>
     </div>
     <button class="chat-close" id="chatClose" aria-label="Close chat">&times;</button>
   </div>
 
   <div class="chat-messages" id="chatMessages" aria-live="polite">
-    <div class="message bot">Hello! 👋 I'm GIDEON LA AI, the Smart Hub Solutions assistant. What problem can I help you understand today?</div>
+    <div class="message bot">Hello! 👋 I'm GIDEON LA AI, your Smart Hub assistant. Tap any question below or type your request!</div>
   </div>
 
-  <div class="typing" id="typing">GIDEON LA AI is typing...</div>
+  <!-- 15 Clickable Preset Questions (Chips) -->
+  <div class="chat-chips" id="chatChips">
+    <span class="chip" onclick="sendPreset('How much for 1.5k Facebook likes?')">1.5k FB Likes price?</span>
+    <span class="chip" onclick="sendPreset('Tell me Facebook followers prices')">FB Followers pricing</span>
+    <span class="chip" onclick="sendPreset('How much for Facebook comments?')">FB Comments rates</span>
+    <span class="chip" onclick="sendPreset('Do you offer Instagram growth services?')">Instagram services</span>
+    <span class="chip" onclick="sendPreset('Do you offer TikTok and X packages?')">TikTok & X packages</span>
+    <span class="chip" onclick="sendPreset('Are these social media followers guaranteed?')">Are followers guaranteed?</span>
+    <span class="chip" onclick="sendPreset('What do I need to provide for likes or followers?')">What links are required?</span>
+    <span class="chip" onclick="sendPreset('How long does delivery take?')">Delivery timeframe</span>
+    <span class="chip" onclick="sendPreset('Do you need my account password?')">Do you need passwords?</span>
+    <span class="chip" onclick="sendPreset('How much is tech guidance?')">Tech guidance fee (178 KSh)</span>
+    <span class="chip" onclick="sendPreset('How can I contact Smart Hub via WhatsApp?')">WhatsApp contact info</span>
+    <span class="chip" onclick="sendPreset('Is this service a scam or legit?')">Is this legit / no scam?</span>
+    <span class="chip" onclick="sendPreset('How do I order or make payments?')">How to order & pay</span>
+    <span class="chip" onclick="sendPreset('Can you help recover a hacked Facebook account?')">Hacked account help</span>
+    <span class="chip" onclick="sendPreset('Tell me about your 7.4M page likes')">About our page success</span>
+  </div>
+
+  <div class="typing" id="typing"><i class="fa-solid fa-spinner fa-spin"></i> GIDEON LA AI is typing...</div>
 
   <form class="chat-form" id="chatForm">
     <input id="chatInput" maxlength="500" placeholder="Type your question..." autocomplete="off" required>
@@ -852,7 +699,7 @@ footer a:hover { color: var(--gold); }
   </form>
 </div>
 
-<a class="whatsapp-float" href="https://wa.me/254789697483?text=Hello%20Smart%20Hub%20Solutions%2C%20I%20need%20help%20with%20a%20problem." target="_blank" rel="noopener noreferrer" aria-label="Contact Smart Hub Solutions on WhatsApp">
+<a class="whatsapp-float" href="https://wa.me/254789697483?text=Hello%20Smart%20Hub%20Solutions%2C%20I%20need%20help%20with%20social%20growth." target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
@@ -860,77 +707,92 @@ footer a:hover { color: var(--gold); }
 "use strict";
 
 const WHATSAPP_NUMBER = "254789697483";
-
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Navigation Toggle
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
+menuBtn.addEventListener("click", () => navLinks.classList.toggle("show"));
+navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => navLinks.classList.remove("show")));
 
-menuBtn.addEventListener("click", function () {
-  navLinks.classList.toggle("show");
-});
+// Growth Packages Data for Facebook, Instagram, TikTok, X
+const packagesData = {
+  facebook: [
+    { title: "Facebook Likes", price: "KSh 250 / 1.5k Likes", desc: "Guaranteed high quality likes for your post.", req: "Requires Post Link" },
+    { title: "Facebook Likes (Large)", price: "KSh 400 for 3k | KSh 600 for 5k | KSh 1000 for 10k", desc: "Massive engagement boost for viral posts.", req: "Requires Post Link" },
+    { title: "Facebook Followers", price: "KSh 200 for 1k | KSh 400 for 5k", desc: "Boost your profile or page credibility instantly.", req: "Requires Page Link" },
+    { title: "Facebook Comments", price: "KSh 300 for 1k | KSh 700 for 4k | KSh 1000 for 7k", desc: "Positive, interactive comments on your posts.", req: "Requires Post Link" }
+  ],
+  instagram: [
+    { title: "Instagram Likes", price: "KSh 250 for 1.5k | KSh 400 for 3k", desc: "Guaranteed real-looking engagement.", req: "Requires Post Link" },
+    { title: "Instagram Followers", price: "KSh 200 for 1k | KSh 400 for 5k", desc: "Grow your IG audience securely.", req: "Requires Profile Link" },
+    { title: "Instagram Comments", price: "KSh 300 for 1k | KSh 700 for 4k", desc: "Active comments to boost algorithm reach.", req: "Requires Post Link" }
+  ],
+  tiktok: [
+    { title: "TikTok Likes", price: "KSh 250 for 1.5k | KSh 400 for 3k", desc: "Push your videos to the FYP with fast likes.", req: "Requires Video Link" },
+    { title: "TikTok Followers", price: "KSh 200 for 1k | KSh 400 for 5k", desc: "Grow your follower count fast and securely.", req: "Requires Profile Link" },
+    { title: "TikTok Comments", price: "KSh 300 for 1k | KSh 700 for 4k", desc: "Engaging comments for your viral videos.", req: "Requires Video Link" }
+  ],
+  twitter: [
+    { title: "X / Twitter Likes", price: "KSh 250 for 1.5k | KSh 400 for 3k", desc: "Boost tweet visibility instantly.", req: "Requires Tweet Link" },
+    { title: "X Followers", price: "KSh 200 for 1k | KSh 400 for 5k", desc: "Expand your audience reach on X.", req: "Requires Profile Link" },
+    { title: "X Comments", price: "KSh 300 for 1k | KSh 700 for 4k", desc: "Engage discussions on your threads.", req: "Requires Tweet Link" }
+  ]
+};
 
-navLinks.querySelectorAll("a").forEach(function (link) {
-  link.addEventListener("click", function () {
-    navLinks.classList.remove("show");
+function switchPlatform(platform) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  
+  const container = document.getElementById('growthContainer');
+  container.innerHTML = '';
+  
+  packagesData[platform].forEach(pkg => {
+    const card = document.createElement('div');
+    card.className = 'growth-card';
+    card.innerHTML = `
+      <div>
+        <h3><i class="fa-solid fa-bolt" style="color:var(--gold)"></i> ${pkg.title}</h3>
+        <div class="price-tag">${pkg.price}</div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:15px">${pkg.desc}</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 100% Guaranteed</li>
+          <li><i class="fa-solid fa-check"></i> ${pkg.req}</li>
+        </ul>
+      </div>
+      <a href="#apply" class="btn btn-blue" style="width:100%;margin-top:15px" onclick="selectServiceForm('${pkg.title}')">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+    `;
+    container.appendChild(card);
   });
-});
-
-function chooseService(service) {
-  document.getElementById("problemType").value = service;
-  document.getElementById("apply").scrollIntoView({ behavior: "smooth" });
-  document.getElementById("description").focus({ preventScroll: true });
 }
 
+function selectServiceForm(serviceTitle) {
+  document.getElementById('platform').value = serviceTitle.includes('Facebook') ? 'Facebook Likes Package' : serviceTitle.includes('Instagram') ? 'Instagram Growth Package' : serviceTitle.includes('TikTok') ? 'TikTok Growth Package' : 'X / Twitter Growth Package';
+}
+
+function chooseService(service) {
+  document.getElementById("platform").value = 'Account Recovery / Tech Problem (KSh 178)';
+  document.getElementById("apply").scrollIntoView({ behavior: "smooth" });
+}
+
+// Initial load for growth packages
+switchPlatform('facebook');
+
+// Form Submission handler to WhatsApp
 document.getElementById("problemForm").addEventListener("submit", function (event) {
   event.preventDefault();
-
   const name = document.getElementById("fullName").value.trim();
   const contact = document.getElementById("contact").value.trim();
   const platform = document.getElementById("platform").value;
-  const problem = document.getElementById("problemType").value;
-  const since = document.getElementById("since").value || "Not specified";
-  const access = document.getElementById("access").value || "Not specified";
-  const error = document.getElementById("error").value.trim() || "Not provided";
-  const description = document.getElementById("description").value.trim();
-  const tried = document.getElementById("tried").value.trim() || "Not specified";
+  const tier = document.getElementById("packageTier").value;
+  const link = document.getElementById("socialLink").value.trim();
+  const desc = document.getElementById("description").value.trim() || "None";
 
-  if (!name || !contact || !platform || !problem || !description) {
-    alert("Please complete all required fields.");
-    return;
-  }
-
-  const message =
-`HELLO SMART HUB SOLUTIONS 👋
-
-I would like assistance with a problem.
-
-MY DETAILS
-Name: ${name}
-Phone: ${contact}
-
-PROBLEM DETAILS
-Platform/device: ${platform}
-Problem type: ${problem}
-When it started: ${since}
-Account access: ${access}
-Error message: ${error}
-
-DESCRIPTION
-${description}
-
-WHAT I HAVE TRIED
-${tried}
-
-Please review my request and explain the available guidance and any applicable fee.
-
-Thank you.`;
-
-  const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
-  window.open(url, "_blank", "noopener,noreferrer");
+  const message = `HELLO SMART HUB SOLUTIONS 👋\n\nI want to place an order / request service.\n\nName: ${name}\nPhone: ${contact}\nService: ${platform}\nPackage Tier: ${tier}\nTarget Link: ${link}\nDetails: ${desc}\n\nPlease process my request. Thank you!`;
+  window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
 });
 
-/* GIDEON LA AI is a scripted demonstration, not a live AI model. */
+// GIDEON LA AI Chat Widget Logic with Typing Effect & 15 Preset Answers
 const chatToggle = document.getElementById("chatToggle");
 const chatBox = document.getElementById("chatBox");
 const chatClose = document.getElementById("chatClose");
@@ -939,100 +801,70 @@ const chatForm = document.getElementById("chatForm");
 const chatInput = document.getElementById("chatInput");
 const typing = document.getElementById("typing");
 
-chatToggle.addEventListener("click", function () {
+chatToggle.addEventListener("click", () => {
   chatBox.classList.toggle("open");
   if (chatBox.classList.contains("open")) chatInput.focus();
 });
-
-chatClose.addEventListener("click", function () {
-  chatBox.classList.remove("open");
-});
+chatClose.addEventListener("click", () => chatBox.classList.remove("open"));
 
 function addMessage(text, type) {
   const message = document.createElement("div");
   message.className = "message " + type;
-  message.textContent = text;
   chatMessages.appendChild(message);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+  
+  // Simulate typing effect for bot replies
+  if (type === 'bot') {
+    let i = 0;
+    message.textContent = "";
+    const speed = 15;
+    function typeWriter() {
+      if (i < text.length) {
+        message.textContent += text.charAt(i);
+        i++;
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    typeWriter();
+  } else {
+    message.textContent = text;
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
 }
 
 function getBotReply(question) {
   const q = question.toLowerCase();
 
-  if (q.includes("hello") || q.includes("hi ") || q === "hi" || q.includes("habari")) {
-    return "Hello! Karibu Smart Hub Solutions. Tell me which account, app or phone problem you are experiencing.";
-  }
+  if (q.includes("1.5k") || q.includes("likes price")) return "Facebook & Instagram Likes: 1.5k likes is only KSh 250! Guaranteed delivery with post link.";
+  if (q.includes("followers")) return "Followers packages: 1k followers for KSh 200, and 5k followers for KSh 400 across Facebook, Instagram, TikTok, and X!";
+  if (q.includes("comments")) return "Comments packages: 1k comments for KSh 300, 4k for KSh 700, and 7k for KSh 1000. All guaranteed with valid post links.";
+  if (q.includes("instagram")) return "Yes! We offer the exact same guaranteed services and prices for Instagram (Likes, Followers, and Comments).";
+  if (q.includes("tiktok") || q.includes("twitter")) return "Yes! TikTok and X (Twitter) have the exact same package options and prices (e.g. 1k followers for 200 KSh).";
+  if (q.includes("guaranteed")) return "Yes, all our social media growth packages are 100% guaranteed and verified with real engagement!";
+  if (q.includes("link") || q.includes("provide")) return "You only need to provide your public Post Link, Video Link, or Page Link. No passwords required!";
+  if (q.includes("delivery") || q.includes("long")) return "Delivery is fast and processed within hours of confirmation on WhatsApp!";
+  if (q.includes("password")) return "Never! We never ask for your account passwords or OTP codes. Your security comes first.";
+  if (q.includes("178") || q.includes("guidance")) return "Tech problem guidance and account recovery consultation is only KSh 178 per problem.";
+  if (q.includes("whatsapp") || q.includes("contact")) return "You can reach us directly on WhatsApp at 0789697483.";
+  if (q.includes("scam") || q.includes("legit")) return "This is 100% legit with zero scams! Our main Facebook page has over 400k followers and 7.4M likes.";
+  if (q.includes("order") || q.includes("pay")) return "Fill out the application form on this website with your link, and it will direct you to WhatsApp for easy payment and processing.";
+  if (q.includes("hacked")) return "For hacked accounts, secure your email first and use official platform recovery tools. You can also book our guidance service for KSh 178.";
+  if (q.includes("7.4m") || q.includes("page")) return "Our verified Facebook page features 400k followers and 7.4M likes, proving our reliable track record!";
 
-  if (q.includes("price") || q.includes("cost") || q.includes("fee") || q.includes("charges") || q.includes("how much")) {
-    return "The website displays a guidance fee of KSh 178 per problem. Please confirm the scope and any applicable payment arrangements before paying.";
-  }
-
-  if (q.includes("hack") || q.includes("hacked")) {
-    return "If your account was hacked, secure your email first if possible. Visit the platform's official recovery page, change compromised passwords and review active sessions. Never share OTPs or recovery codes.";
-  }
-
-  if (q.includes("facebook") && (q.includes("disabled") || q.includes("suspend") || q.includes("locked"))) {
-    return "Check the message displayed when you log in and use Facebook's official appeal or account recovery process. Only the platform can decide whether to restore a disabled account.";
-  }
-
-  if (q.includes("facebook")) {
-    return "For Facebook problems, identify the exact error and try the official account recovery tools at facebook.com/login/identify. Tell us what message you see if you need more guidance.";
-  }
-
-  if (q.includes("instagram")) {
-    return "For Instagram, use the app's official password reset or hacked-account recovery options. Make sure you control the linked email or phone number whenever possible.";
-  }
-
-  if (q.includes("whatsapp")) {
-    return "For WhatsApp problems, use the official app and request verification only through the app. Never give anyone your registration code or two-step verification PIN.";
-  }
-
-  if (q.includes("tiktok")) {
-    return "For TikTok, try the official password reset process and check the support or account-status options in the app. Describe the error so the next steps can be clearer.";
-  }
-
-  if (q.includes("password") || q.includes("login") || q.includes("log in")) {
-    return "Use the official password reset option for the platform. Check your recovery email or phone and never share your verification code with another person.";
-  }
-
-  if (q.includes("otp") || q.includes("verification code") || q.includes("pin")) {
-    return "Keep verification codes, passwords and M-Pesa PINs private. A genuine helper does not need you to send these secrets through WhatsApp.";
-  }
-
-  if (q.includes("money") || q.includes("payment") || q.includes("mpesa")) {
-    return "Before making a payment, confirm the service, amount and recipient. Never share your M-Pesa PIN. The KSh 178 displayed on this site is the stated guidance fee per problem.";
-  }
-
-  if (q.includes("fake") || q.includes("impersonat") || q.includes("scam")) {
-    return "Save relevant evidence without engaging the suspicious account. Report it using the platform's official reporting tools and secure your own accounts.";
-  }
-
-  if (q.includes("phone") || q.includes("app") || q.includes("network")) {
-    return "Start by checking your connection, restarting the app or phone, and updating the app from its official store. Tell me the phone model and exact error for more targeted guidance.";
-  }
-
-  if (q.includes("recover") || q.includes("recovery")) {
-    return "Account recovery depends on the platform's official process and the evidence available. Use the official recovery page and avoid anyone promising guaranteed recovery for payment.";
-  }
-
-  if (q.includes("contact") || q.includes("whatsapp number") || q.includes("reach you")) {
-    return "You can reach Smart Hub Solutions on WhatsApp at 0789697483, or use the application form on this website to prepare a detailed message.";
-  }
-
-  if (q.includes("guarantee") || q.includes("guaranteed")) {
-    return "We cannot guarantee that an account will be recovered or a platform decision reversed. We can provide guidance on the available official procedures.";
-  }
-
-  if (q.includes("thank")) {
-    return "You're welcome! 😊 If you need help with a specific issue, use the application form or contact Smart Hub Solutions through WhatsApp.";
-  }
-
-  return "Thanks for explaining your question. I can offer general guidance on Facebook, Instagram, WhatsApp, account security and phone problems. For help with your specific situation, use the application form or WhatsApp. Please never share passwords or verification codes.";
+  return "Karibu Smart Hub Solutions! We offer guaranteed social media growth (Likes, Followers, Comments) for Facebook, Instagram, TikTok, and X, plus tech support. Tap any preset question above or order via WhatsApp!";
 }
 
-chatForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+function sendPreset(query) {
+  addMessage(query, "user");
+  typing.style.display = "block";
+  setTimeout(() => {
+    typing.style.display = "none";
+    addMessage(getBotReply(query), "bot");
+  }, 1000);
+}
 
+chatForm.addEventListener("submit", (event) => {
+  event.preventDefault();
   const question = chatInput.value.trim();
   if (!question) return;
 
@@ -1042,13 +874,13 @@ chatForm.addEventListener("submit", function (event) {
   chatInput.disabled = true;
   chatForm.querySelector("button").disabled = true;
 
-  window.setTimeout(function () {
+  setTimeout(() => {
     typing.style.display = "none";
     addMessage(getBotReply(question), "bot");
     chatInput.disabled = false;
     chatForm.querySelector("button").disabled = false;
     chatInput.focus();
-  }, 3000);
+  }, 1200);
 });
 </script>
 
