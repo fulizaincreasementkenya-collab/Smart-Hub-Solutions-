@@ -2,2234 +2,1981 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07111f">
-
-  <title>Smart Hub Solutions | Tech Help & Social Media Engagement</title>
-  <meta name="description" content="Smart Hub Solutions provides practical technology guidance and social media engagement services for supported platforms. Contact us on WhatsApp.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Real Font Awesome icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-  <style>
-    :root {
-      --bg: #07111f;
-      --surface: #0d1b2d;
-      --surface2: #102239;
-      --gold: #f4bd50;
-      --gold2: #ffda83;
-      --white: #f7f9fc;
-      --muted: #a9b8ca;
-      --green: #25d366;
-      --border: rgba(255,255,255,.10);
-      --radius: 22px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--white);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button, input, select, textarea {
-      font: inherit;
-    }
-
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1140px, 92%);
-      margin: auto;
-    }
-
-    .section {
-      padding: 82px 0;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 800;
-      font-size: .76rem;
-      margin-bottom: 12px;
-    }
-
-    .section-heading {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      line-height: 1.15;
-      margin-bottom: 16px;
-      letter-spacing: -1px;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      max-width: 690px;
-      margin-bottom: 34px;
-    }
-
-    .gold {
-      color: var(--gold);
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .topbar {
-      background: #050c16;
-      border-bottom: 1px solid var(--border);
-      color: var(--muted);
-      font-size: .82rem;
-      padding: 8px 0;
-    }
-
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .navbar {
-      background: rgba(7,17,31,.95);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
-
-    .nav-inner {
-      min-height: 76px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -.5px;
-    }
-
-    .brand-mark {
-      width: 43px;
-      height: 43px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(140deg, var(--gold2), #b87b19);
-      color: #101522;
-      font-size: 1.2rem;
-      box-shadow: 0 8px 25px rgba(244,189,80,.15);
-    }
-
-    .brand small {
-      display: block;
-      font-size: .65rem;
-      color: var(--muted);
-      letter-spacing: 1.7px;
-      margin-top: 4px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 23px;
-      font-size: .86rem;
-      color: #d9e2ee;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .btn {
-      border: 0;
-      border-radius: 12px;
-      padding: 13px 19px;
-      background: linear-gradient(135deg, var(--gold2), var(--gold));
-      color: #17202b;
-      font-weight: 800;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 9px;
-      cursor: pointer;
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(244,189,80,.17);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid rgba(244,189,80,.55);
-      color: var(--gold2);
-    }
-
-    .btn-whatsapp {
-      background: var(--green);
-      color: #062112;
-    }
-
-    .btn-small {
-      padding: 10px 14px;
-      font-size: .82rem;
-    }
-
-    .hero {
-      padding: 82px 0 65px;
-      background:
-        radial-gradient(ellipse at 80% 20%, rgba(244,189,80,.13), transparent 36%),
-        radial-gradient(ellipse at 10% 90%, rgba(35,115,173,.13), transparent 35%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 52px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.7rem);
-      line-height: 1.04;
-      letter-spacing: -2.5px;
-      margin-bottom: 23px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 1.03rem;
-      max-width: 590px;
-      margin-bottom: 27px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-      margin-bottom: 27px;
-    }
-
-    .trust-line {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      color: #d5dfeb;
-      font-size: .82rem;
-    }
-
-    .trust-line i {
-      color: var(--gold);
-      margin-right: 5px;
-    }
-
-    .hero-visual {
-      position: relative;
-      min-height: 390px;
-    }
-
-    .hero-image {
-      position: absolute;
-      inset: 0 15px 10px 30px;
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.15);
-      background: #14263a;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: .73;
-    }
-
-    .hero-image:after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 20%, rgba(7,17,31,.92));
-    }
-
-    .floating-card {
-      position: absolute;
-      z-index: 2;
-      background: rgba(13,27,45,.96);
-      border: 1px solid rgba(244,189,80,.35);
-      border-radius: 17px;
-      padding: 16px 18px;
-      box-shadow: 0 20px 45px rgba(0,0,0,.3);
-    }
-
-    .floating-card i {
-      color: var(--gold);
-      font-size: 1.25rem;
-      margin-bottom: 7px;
-    }
-
-    .floating-card strong {
-      display: block;
-      font-size: .92rem;
-    }
-
-    .floating-card span {
-      color: var(--muted);
-      font-size: .75rem;
-    }
-
-    .float-one {
-      top: 25px;
-      left: 0;
-      animation: float 4s ease-in-out infinite;
-    }
-
-    .float-two {
-      bottom: 30px;
-      right: 0;
-      animation: float 4.5s ease-in-out infinite reverse;
-    }
-
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-9px); }
-    }
-
-    .mini-stats {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 13px;
-      margin-top: 35px;
-    }
-
-    .mini-stat {
-      border-left: 2px solid var(--gold);
-      padding-left: 12px;
-    }
-
-    .mini-stat strong {
-      display: block;
-      font-size: 1.05rem;
-    }
-
-    .mini-stat span {
-      font-size: .75rem;
-      color: var(--muted);
-    }
-
-    .services-section {
-      background: #091524;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 24px;
-    }
-
-    .service-card {
-      padding: 30px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: linear-gradient(145deg, #11243a, #0b192a);
-      position: relative;
-      overflow: hidden;
-      transition: transform .25s, border-color .25s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(244,189,80,.5);
-    }
-
-    .service-card:after {
-      content: "";
-      position: absolute;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      right: -80px;
-      top: -80px;
-      background: rgba(244,189,80,.05);
-      pointer-events: none;
-    }
-
-    .service-icon {
-      width: 61px;
-      height: 61px;
-      display: grid;
-      place-items: center;
-      border-radius: 18px;
-      background: rgba(244,189,80,.12);
-      color: var(--gold);
-      font-size: 1.65rem;
-      margin-bottom: 22px;
-    }
-
-    .service-card h3 {
-      font-size: 1.45rem;
-      margin-bottom: 12px;
-      line-height: 1.3;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      margin-bottom: 19px;
-    }
-
-    .service-card ul {
-      list-style: none;
-      margin: 18px 0 25px;
-    }
-
-    .service-card li {
-      color: #dbe5ef;
-      margin: 8px 0;
-      font-size: .91rem;
-    }
-
-    .service-card li i {
-      color: var(--gold);
-      margin-right: 9px;
-    }
-
-    .social-platforms {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin: 18px 0 24px;
-      font-size: 1.9rem;
-    }
-
-    .social-platforms .fa-facebook {
-      color: #1877f2;
-    }
-
-    .social-platforms .fa-instagram {
-      color: #e6688b;
-    }
-
-    .social-platforms .fa-tiktok {
-      color: #ffffff;
-    }
-
-    .social-platforms .fa-x-twitter {
-      color: #ffffff;
-    }
-
-    .social-platforms .fa-youtube {
-      color: #ff3333;
-    }
-
-    .service-card .btn {
-      position: relative;
-      z-index: 1;
-    }
-
-    .price-note {
-      font-size: .85rem;
-      color: var(--gold2);
-      margin: 8px 0 20px;
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 18px;
-    }
-
-    .step-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 24px;
-      border-radius: 18px;
-    }
-
-    .step-number {
-      color: var(--gold);
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 10px;
-    }
-
-    .step-card h3 {
-      font-size: 1.02rem;
-      margin-bottom: 8px;
-    }
-
-    .step-card p {
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .promotion-section {
-      background:
-        radial-gradient(ellipse at 90% 0%, rgba(244,189,80,.08), transparent 35%),
-        #091524;
-    }
-
-    .promotion-layout {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 35px;
-      align-items: start;
-    }
-
-    .promotion-copy {
-      position: sticky;
-      top: 105px;
-    }
-
-    .platform-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin: 20px 0;
-    }
-
-    .platform-tab {
-      border: 1px solid var(--border);
-      color: var(--white);
-      background: #102239;
-      border-radius: 11px;
-      padding: 10px 13px;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: .82rem;
-    }
-
-    .platform-tab.active {
-      border-color: var(--gold);
-      color: var(--gold2);
-      background: rgba(244,189,80,.1);
-    }
-
-    .platform-tab i {
-      margin-right: 6px;
-    }
-
-    .package-group {
-      margin-bottom: 24px;
-    }
-
-    .package-group h3 {
-      margin-bottom: 12px;
-      font-size: 1.05rem;
-    }
-
-    .package-grid {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 12px;
-    }
-
-    .package {
-      padding: 17px;
-      border-radius: 15px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      cursor: pointer;
-      text-align: left;
-      color: var(--white);
-      transition: border-color .2s, transform .2s;
-    }
-
-    .package:hover {
-      transform: translateY(-2px);
-      border-color: rgba(244,189,80,.5);
-    }
-
-    .package.selected {
-      border-color: var(--gold);
-      background: rgba(244,189,80,.08);
-      box-shadow: inset 0 0 0 1px rgba(244,189,80,.2);
-    }
-
-    .package strong {
-      display: block;
-      font-size: 1rem;
-      margin-bottom: 3px;
-    }
-
-    .package span {
-      color: var(--muted);
-      font-size: .8rem;
-    }
-
-    .package .package-price {
-      color: var(--gold2);
-      font-weight: 900;
-      font-size: 1.15rem;
-      margin-top: 10px;
-    }
-
-    .selected-package {
-      background: rgba(37,211,102,.07);
-      border: 1px solid rgba(37,211,102,.28);
-      border-radius: 15px;
-      padding: 15px;
-      margin: 20px 0;
-      font-size: .88rem;
-    }
-
-    .selected-package strong {
-      color: #70ed9c;
-    }
-
-    .form-card {
-      background: #0d1b2d;
-      border: 1px solid var(--border);
-      border-radius: 23px;
-      padding: 27px;
-    }
-
-    .form-card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 8px;
-    }
-
-    .form-card > p {
-      color: var(--muted);
-      margin-bottom: 22px;
-      font-size: .9rem;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 16px;
-    }
-
-    .field {
-      margin-bottom: 16px;
-      min-width: 0;
-    }
-
-    .field.full {
-      grid-column: 1/-1;
-    }
-
-    .field label {
-      display: block;
-      font-size: .83rem;
-      color: #dbe5ef;
-      font-weight: 700;
-      margin-bottom: 7px;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      background: #071321;
-      color: var(--white);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 11px;
-      padding: 13px;
-      outline: none;
-      min-width: 0;
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(244,189,80,.08);
-    }
-
-    .field textarea {
-      resize: vertical;
-      min-height: 105px;
-    }
-
-    .field select option {
-      background: #0d1b2d;
-    }
-
-    .checkbox-line {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: .82rem;
-      color: var(--muted);
-      margin: 8px 0 18px;
-    }
-
-    .checkbox-line input {
-      margin-top: 6px;
-      accent-color: var(--gold);
-    }
-
-    .notice {
-      padding: 13px 15px;
-      border-radius: 12px;
-      border: 1px solid rgba(244,189,80,.2);
-      background: rgba(244,189,80,.06);
-      color: #dbe5ef;
-      font-size: .81rem;
-      margin: 15px 0;
-    }
-
-    .notice i {
-      color: var(--gold);
-      margin-right: 7px;
-    }
-
-    .form-card .btn {
-      width: 100%;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: center;
-    }
-
-    .about-image {
-      height: 360px;
-      border-radius: 25px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: #132238;
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .about-points {
-      margin-top: 22px;
-      display: grid;
-      gap: 13px;
-    }
-
-    .about-point {
-      display: flex;
-      gap: 13px;
-      align-items: flex-start;
-    }
-
-    .about-point i {
-      color: var(--gold);
-      margin-top: 6px;
-    }
-
-    .about-point strong {
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .about-point span {
-      display: block;
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    .faq-list {
-      display: grid;
-      gap: 12px;
-      max-width: 850px;
-    }
-
-    .faq-item {
-      border: 1px solid var(--border);
-      background: var(--surface);
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%;
-      padding: 18px;
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      background: transparent;
-      color: var(--white);
-      border: 0;
-      text-align: left;
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    .faq-answer {
-      display: none;
-      color: var(--muted);
-      padding: 0 18px 18px;
-      font-size: .91rem;
-    }
-
-    .faq-item.open .faq-answer {
-      display: block;
-    }
-
-    .faq-item.open .faq-question i {
-      transform: rotate(45deg);
-    }
-
-    .footer {
-      background: #040a12;
-      padding: 50px 0 22px;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr;
-      gap: 35px;
-      margin-bottom: 35px;
-    }
-
-    .footer h3 {
-      font-size: 1rem;
-      margin-bottom: 13px;
-    }
-
-    .footer p,
-    .footer a {
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    .footer-links {
-      display: grid;
-      gap: 9px;
-    }
-
-    .footer a:hover {
-      color: var(--gold);
-    }
-
-    .footer-bottom {
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      color: #8394a8;
-      font-size: .78rem;
-    }
-
-    .floating-whatsapp {
-      position: fixed;
-      right: 19px;
-      bottom: 20px;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--green);
-      color: #062112;
-      font-size: 1.8rem;
-      z-index: 70;
-      box-shadow: 0 8px 30px rgba(37,211,102,.25);
-      animation: pulse 2.4s infinite;
-    }
-
-    @keyframes pulse {
-      0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,.28); }
-      50% { box-shadow: 0 0 0 11px rgba(37,211,102,0); }
-    }
-
-    /* GIDEON LA chatbot */
-    .chat-launcher {
-      position: fixed;
-      left: 18px;
-      bottom: 20px;
-      z-index: 80;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 15px;
-      border: 1px solid rgba(244,189,80,.45);
-      border-radius: 18px;
-      background: #12253b;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0,0,0,.3);
-    }
-
-    .chat-launcher i {
-      color: var(--gold);
-      font-size: 1.35rem;
-    }
-
-    .chat-launcher strong {
-      display: block;
-      font-size: .84rem;
-    }
-
-    .chat-launcher small {
-      display: block;
-      color: var(--muted);
-      font-size: .7rem;
-    }
-
-    .chat-panel {
-      display: none;
-      position: fixed;
-      z-index: 90;
-      left: 18px;
-      bottom: 91px;
-      width: min(390px, calc(100vw - 36px));
-      height: min(570px, calc(100vh - 130px));
-      background: #0b1828;
-      border: 1px solid rgba(244,189,80,.3);
-      border-radius: 20px;
-      box-shadow: 0 20px 70px rgba(0,0,0,.5);
-      overflow: hidden;
-      flex-direction: column;
-    }
-
-    .chat-panel.open {
-      display: flex;
-    }
-
-    .chat-header {
-      padding: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #12253b;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .chat-title {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-    }
-
-    .chat-avatar {
-      width: 39px;
-      height: 39px;
-      border-radius: 13px;
-      display: grid;
-      place-items: center;
-      color: #111a25;
-      background: linear-gradient(135deg,var(--gold2),var(--gold));
-    }
-
-    .chat-title strong {
-      display: block;
-      font-size: .9rem;
-    }
-
-    .chat-title small {
-      color: #82e7a0;
-      font-size: .72rem;
-    }
-
-    .chat-close {
-      border: 0;
-      background: transparent;
-      color: white;
-      font-size: 1.3rem;
-      cursor: pointer;
-      padding: 5px;
-    }
-
-    .chat-messages {
-      flex: 1;
-      overflow-y: auto;
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .chat-message {
-      max-width: 91%;
-      border-radius: 14px;
-      padding: 11px 13px;
-      font-size: .83rem;
-      white-space: pre-wrap;
-      overflow-wrap: anywhere;
-    }
-
-    .chat-message.bot {
-      align-self: flex-start;
-      background: #172b42;
-      color: #eaf1f8;
-      border-bottom-left-radius: 4px;
-    }
-
-    .chat-message.user {
-      align-self: flex-end;
-      background: rgba(244,189,80,.16);
-      border: 1px solid rgba(244,189,80,.18);
-      color: white;
-      border-bottom-right-radius: 4px;
-    }
-
-    .chat-quick {
-      padding: 10px 13px 13px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      gap: 7px;
-      flex-wrap: wrap;
-      max-height: 145px;
-      overflow-y: auto;
-    }
-
-    .quick-question {
-      border: 1px solid rgba(244,189,80,.3);
-      background: #102239;
-      color: #f4d99c;
-      border-radius: 20px;
-      padding: 7px 10px;
-      font-size: .72rem;
-      cursor: pointer;
-    }
-
-    .quick-question:hover {
-      background: rgba(244,189,80,.12);
-    }
-
-    .chat-typing {
-      display: none;
-      align-self: flex-start;
-      background: #172b42;
-      border-radius: 14px;
-      padding: 12px 15px;
-      gap: 5px;
-    }
-
-    .chat-typing.show {
-      display: flex;
-    }
-
-    .chat-typing span {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-      animation: dot 1s infinite;
-    }
-
-    .chat-typing span:nth-child(2) { animation-delay: .15s; }
-    .chat-typing span:nth-child(3) { animation-delay: .3s; }
-
-    @keyframes dot {
-      0%,60%,100% { opacity: .35; transform: translateY(0); }
-      30% { opacity: 1; transform: translateY(-4px); }
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    @media (max-width: 900px) {
-      .nav-links {
-        gap: 13px;
-      }
-
-      .nav-links a:not(.btn) {
-        display: none;
-      }
-
-      .hero-grid,
-      .promotion-layout,
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        min-height: 330px;
-      }
-
-      .promotion-copy {
-        position: static;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-grid > div:first-child {
-        grid-column: 1/-1;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .section {
-        padding: 60px 0;
-      }
-
-      .hero {
-        padding-top: 55px;
-      }
-
-      .hero h1 {
-        letter-spacing: -1.5px;
-      }
-
-      .hero-grid {
-        gap: 32px;
-      }
-
-      .hero-visual {
-        min-height: 285px;
-      }
-
-      .service-grid,
-      .steps-grid,
-      .form-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid > div:first-child {
-        grid-column: auto;
-      }
-
-      .service-card,
-      .form-card {
-        padding: 22px;
-      }
-
-      .mini-stats {
-        gap: 8px;
-      }
-
-      .mini-stat span {
-        font-size: .68rem;
-      }
-
-      .package-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .package {
-        padding: 13px;
-      }
-
-      .topbar-inner {
-        justify-content: center;
-      }
-
-      .brand {
-        font-size: .88rem;
-      }
-
-      .nav-inner {
-        min-height: 68px;
-      }
-
-      .nav-inner > .btn {
-        padding: 10px 12px;
-        font-size: .8rem;
-      }
-
-      .chat-launcher {
-        left: 10px;
-        bottom: 12px;
-      }
-
-      .floating-whatsapp {
-        right: 12px;
-        bottom: 12px;
-      }
-
-      .chat-panel {
-        left: 10px;
-        bottom: 78px;
-        width: calc(100vw - 20px);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0866ff">
+<title>Smart Hub Solutions | Tech Help & Social Media Services</title>
+<meta name="description" content="Smart Hub Solutions offers practical technology guidance and social media engagement services. Contact us on WhatsApp.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+:root {
+  --blue: #0866ff;
+  --blue-dark: #0649bd;
+  --blue-light: #eaf2ff;
+  --blue-pale: #f4f8ff;
+  --white: #ffffff;
+  --text: #152238;
+  --muted: #64748b;
+  --border: #e2eaf5;
+  --green: #20c866;
+  --radius: 20px;
+  --shadow: 0 12px 35px rgba(21, 62, 120, .08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1140px, 92%);
+  margin: auto;
+}
+
+.section {
+  padding: 78px 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue);
+  background: var(--blue-light);
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: .77rem;
+  font-weight: 800;
+  letter-spacing: .4px;
+  margin-bottom: 17px;
+}
+
+.section-heading {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+  margin-bottom: 16px;
+}
+
+.section-intro {
+  color: var(--muted);
+  max-width: 700px;
+  margin-bottom: 34px;
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid transparent;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 800;
+  padding: 13px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .2s, background .2s, box-shadow .2s;
+}
+
+.btn:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(8, 102, 255, .18);
+}
+
+.btn-outline {
+  color: var(--blue);
+  background: var(--white);
+  border-color: #c8dbff;
+}
+
+.btn-outline:hover {
+  color: var(--blue-dark);
+  background: var(--blue-light);
+}
+
+.btn-whatsapp {
+  background: var(--green);
+  color: #073d20;
+}
+
+.btn-whatsapp:hover {
+  background: #17b95a;
+}
+
+.btn-small {
+  padding: 10px 14px;
+  font-size: .83rem;
+}
+
+/* Top strip */
+.topbar {
+  background: var(--blue);
+  color: white;
+  padding: 8px 0;
+  font-size: .8rem;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: .96rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--blue);
+  color: white;
+  font-size: 1.25rem;
+  box-shadow: 0 7px 18px rgba(8,102,255,.2);
+}
+
+.brand small {
+  display: block;
+  color: var(--blue);
+  font-size: .65rem;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: .86rem;
+  font-weight: 600;
+}
+
+.nav-links a:not(.btn):hover {
+  color: var(--blue);
+}
+
+/* Hero */
+.hero {
+  padding: 78px 0 70px;
+  background:
+    radial-gradient(ellipse at 90% 5%, #dce9ff 0, transparent 35%),
+    linear-gradient(180deg, #f7faff, #ffffff);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.55rem);
+  line-height: 1.06;
+  letter-spacing: -2.6px;
+  margin-bottom: 23px;
+}
+
+.hero p {
+  max-width: 590px;
+  color: var(--muted);
+  font-size: 1.03rem;
+  margin-bottom: 27px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.trust-line {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: #40516a;
+  font-size: .81rem;
+}
+
+.trust-line i {
+  color: var(--blue);
+  margin-right: 5px;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 395px;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0 12px 12px 25px;
+  overflow: hidden;
+  border-radius: 26px;
+  background: #dbe8ff;
+  box-shadow: var(--shadow);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4,34,89,.02), rgba(4,34,89,.45));
+}
+
+.floating-card {
+  position: absolute;
+  z-index: 2;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 15px 18px;
+  box-shadow: 0 12px 32px rgba(16,55,112,.13);
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-card i {
+  color: var(--blue);
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.floating-card strong {
+  display: block;
+  font-size: .91rem;
+}
+
+.floating-card span {
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.float-one {
+  top: 23px;
+  left: 0;
+}
+
+.float-two {
+  bottom: 30px;
+  right: 0;
+  animation-delay: .8s;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.mini-stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 13px;
+  margin-top: 33px;
+}
+
+.mini-stat {
+  border-left: 3px solid var(--blue);
+  padding-left: 12px;
+}
+
+.mini-stat strong {
+  display: block;
+  font-size: 1.03rem;
+}
+
+.mini-stat span {
+  color: var(--muted);
+  font-size: .74rem;
+}
+
+/* Services */
+.services-section {
+  background: var(--blue-pale);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 23px;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform .25s, border-color .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #a8c7ff;
+}
+
+.service-icon {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  background: var(--blue-light);
+  color: var(--blue);
+  border-radius: 17px;
+  font-size: 1.65rem;
+  margin-bottom: 21px;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.service-card ul {
+  list-style: none;
+  margin: 17px 0 22px;
+}
+
+.service-card li {
+  margin: 8px 0;
+  color: #394a61;
+  font-size: .91rem;
+}
+
+.service-card li i {
+  color: var(--blue);
+  margin-right: 9px;
+}
+
+.price-note {
+  color: var(--blue-dark);
+  background: var(--blue-light);
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: 800;
+  font-size: .85rem;
+  margin-bottom: 20px;
+}
+
+.social-platforms {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 18px 0 22px;
+  font-size: 1.9rem;
+}
+
+.fa-facebook { color: #1877f2; }
+.fa-instagram { color: #d94683; }
+.fa-tiktok { color: #111827; }
+.fa-x-twitter { color: #111827; }
+.fa-youtube { color: #ff0033; }
+
+.social-platforms i {
+  transition: transform .2s;
+}
+
+.social-platforms i:hover {
+  transform: translateY(-4px);
+}
+
+/* Steps */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+}
+
+.step-card {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 17px;
+  box-shadow: 0 6px 20px rgba(21,62,120,.04);
+}
+
+.step-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: var(--blue);
+  font-weight: 900;
+  margin-bottom: 13px;
+}
+
+.step-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.03rem;
+}
+
+.step-card p {
+  color: var(--muted);
+  font-size: .89rem;
+}
+
+/* Packages and forms */
+.promotion-section {
+  background: var(--blue-pale);
+}
+
+.promotion-layout {
+  display: grid;
+  grid-template-columns: .83fr 1.17fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.promotion-copy {
+  position: sticky;
+  top: 105px;
+}
+
+.promotion-copy h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.platform-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.platform-tab {
+  padding: 10px 12px;
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .81rem;
+}
+
+.platform-tab i {
+  margin-right: 5px;
+}
+
+.platform-tab.active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+
+.platform-tab.active i {
+  color: white;
+}
+
+.form-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 27px;
+  box-shadow: var(--shadow);
+}
+
+.form-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 7px;
+}
+
+.form-card > p {
+  color: var(--muted);
+  font-size: .9rem;
+  margin-bottom: 21px;
+}
+
+.package-group {
+  margin-bottom: 23px;
+}
+
+.package-group h4 {
+  font-size: .98rem;
+  margin-bottom: 11px;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 11px;
+}
+
+.package {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  padding: 15px;
+  border-radius: 13px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color .2s, background .2s, transform .2s;
+}
+
+.package:hover {
+  transform: translateY(-2px);
+  border-color: #9abfff;
+}
+
+.package.selected {
+  border-color: var(--blue);
+  background: var(--blue-light);
+  box-shadow: inset 0 0 0 1px var(--blue);
+}
+
+.package strong {
+  display: block;
+  font-size: .92rem;
+}
+
+.package span {
+  display: block;
+  color: var(--muted);
+  font-size: .76rem;
+}
+
+.package .package-price {
+  color: var(--blue);
+  font-size: 1.13rem;
+  font-weight: 900;
+  margin-top: 9px;
+}
+
+.selected-package {
+  padding: 14px;
+  border: 1px solid #b8d0ff;
+  background: var(--blue-light);
+  border-radius: 13px;
+  margin: 19px 0;
+  font-size: .86rem;
+}
+
+.selected-package strong {
+  display: block;
+  color: var(--blue-dark);
+  margin-bottom: 4px;
+}
+
+.field {
+  min-width: 0;
+  margin-bottom: 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 0 14px;
+}
+
+.field.full {
+  grid-column: 1/-1;
+}
+
+.field label {
+  display: block;
+  font-size: .82rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #dce5f0;
+  background: #fbfdff;
+  color: var(--text);
+  border-radius: 10px;
+  outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(8,102,255,.08);
+}
+
+.field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.field select option {
+  background: white;
+  color: var(--text);
+}
+
+.checkbox-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--muted);
+  font-size: .8rem;
+  margin: 9px 0 18px;
+}
+
+.checkbox-line input {
+  margin-top: 6px;
+  accent-color: var(--blue);
+}
+
+.notice {
+  padding: 13px 14px;
+  border: 1px solid #d7e5ff;
+  background: #f3f7ff;
+  color: #425571;
+  border-radius: 12px;
+  font-size: .82rem;
+  margin: 15px 0;
+}
+
+.notice i {
+  color: var(--blue);
+  margin-right: 7px;
+}
+
+.form-card form > .btn {
+  width: 100%;
+}
+
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.about-image {
+  height: 360px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--blue-light);
+  box-shadow: var(--shadow);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-points {
+  display: grid;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.about-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.about-point > i {
+  color: var(--blue);
+  margin-top: 5px;
+}
+
+.about-point strong {
+  display: block;
+}
+
+.about-point span {
+  display: block;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+/* FAQs */
+.faq-section {
+  background: var(--blue-pale);
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 850px;
+}
+
+.faq-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  border: 0;
+  background: white;
+  color: var(--text);
+  padding: 17px 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 700;
+}
+
+.faq-question i {
+  color: var(--blue);
+  transition: transform .2s;
+}
+
+.faq-answer {
+  display: none;
+  color: var(--muted);
+  padding: 0 19px 18px;
+  font-size: .9rem;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .faq-question i {
+  transform: rotate(45deg);
+}
+
+/* Footer */
+.footer {
+  background: #f7faff;
+  border-top: 1px solid var(--border);
+  padding: 48px 0 22px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 35px;
+  margin-bottom: 30px;
+}
+
+.footer h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.footer p,
+.footer a {
+  color: var(--muted);
+  font-size: .87rem;
+}
+
+.footer-links {
+  display: grid;
+  gap: 9px;
+}
+
+.footer a:hover {
+  color: var(--blue);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #748198;
+  font-size: .78rem;
+}
+
+/* Floating buttons */
+.floating-whatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: #fff;
+  font-size: 1.8rem;
+  z-index: 70;
+  box-shadow: 0 7px 25px rgba(32,200,102,.28);
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(32,200,102,.3); }
+  50% { box-shadow: 0 0 0 10px rgba(32,200,102,0); }
+}
+
+/* GIDEON LA chatbot */
+.chat-launcher {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 15px;
+  border: 1px solid #c7dcff;
+  border-radius: 16px;
+  background: white;
+  color: var(--text);
+  box-shadow: 0 8px 28px rgba(25,67,130,.16);
+  cursor: pointer;
+}
+
+.chat-launcher > i {
+  font-size: 1.4rem;
+  color: var(--blue);
+}
+
+.chat-launcher strong {
+  display: block;
+  font-size: .83rem;
+}
+
+.chat-launcher small {
+  display: block;
+  font-size: .7rem;
+  color: var(--muted);
+}
+
+.chat-panel {
+  display: none;
+  position: fixed;
+  z-index: 90;
+  left: 18px;
+  bottom: 86px;
+  width: min(390px, calc(100vw - 36px));
+  height: min(570px, calc(100vh - 120px));
+  flex-direction: column;
+  background: white;
+  border: 1px solid #cbdcff;
+  border-radius: 19px;
+  box-shadow: 0 18px 65px rgba(20,55,100,.25);
+  overflow: hidden;
+}
+
+.chat-panel.open {
+  display: flex;
+}
+
+.chat-header {
+  background: var(--blue);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-avatar {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: white;
+  color: var(--blue);
+}
+
+.chat-title strong {
+  display: block;
+  font-size: .9rem;
+}
+
+.chat-title small {
+  color: #e1ecff;
+  font-size: .72rem;
+}
+
+.chat-close {
+  background: transparent;
+  color: white;
+  border: 0;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.chat-message {
+  max-width: 91%;
+  padding: 11px 13px;
+  border-radius: 14px;
+  font-size: .82rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  background: #edf3fc;
+  color: #203149;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background: var(--blue);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-typing {
+  display: none;
+  align-self: flex-start;
+  background: #edf3fc;
+  border-radius: 13px;
+  padding: 12px 15px;
+  gap: 5px;
+}
+
+.chat-typing.show {
+  display: flex;
+}
+
+.chat-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  animation: dot 1s infinite;
+}
+
+.chat-typing span:nth-child(2) { animation-delay: .15s; }
+.chat-typing span:nth-child(3) { animation-delay: .3s; }
+
+@keyframes dot {
+  0%,60%,100% { opacity: .35; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-4px); }
+}
+
+.chat-quick {
+  padding: 10px 12px 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  max-height: 145px;
+  overflow-y: auto;
+}
+
+.quick-question {
+  background: white;
+  border: 1px solid #c7dcff;
+  color: var(--blue-dark);
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: .71rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.quick-question:hover {
+  background: var(--blue-light);
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .promotion-layout,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 330px;
+  }
+
+  .promotion-copy {
+    position: static;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a:not(.btn) {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 58px 0;
+  }
+
+  .hero {
+    padding-top: 52px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .hero-visual {
+    min-height: 280px;
+  }
+
+  .service-grid,
+  .steps-grid,
+  .form-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: auto;
+  }
+
+  .service-card,
+  .form-card {
+    padding: 21px;
+  }
+
+  .package-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .topbar-inner {
+    justify-content: center;
+  }
+
+  .nav-inner {
+    min-height: 68px;
+  }
+
+  .brand {
+    font-size: .84rem;
+  }
+
+  .nav-inner > .btn {
+    padding: 10px 11px;
+    font-size: .76rem;
+  }
+
+  .chat-launcher {
+    left: 9px;
+    bottom: 12px;
+  }
+
+  .floating-whatsapp {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .chat-panel {
+    left: 10px;
+    bottom: 78px;
+    width: calc(100vw - 20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span><i class="fa-solid fa-circle-check gold"></i> Your daily guide to practical solutions</span>
-      <span><i class="fa-brands fa-whatsapp"></i> WhatsApp support available</span>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span><i class="fa-solid fa-circle-check"></i> Your daily guide to practical solutions</span>
+    <span><i class="fa-brands fa-whatsapp"></i> Convenient WhatsApp enquiries</span>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span>SMART HUB<small>SOLUTIONS</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#promotion">Packages</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQs</a>
+      <a href="#services" class="btn btn-small">Get Started</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><i class="fa-solid fa-bolt"></i> Smart solutions for everyday challenges</div>
+      <h1>Real problems.<br><span class="blue">Practical solutions.</span></h1>
+      <p>
+        Welcome to Smart Hub Solutions. Get practical technology guidance
+        and social media engagement services in one convenient place.
+        Choose the service you need and contact us directly.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#services" class="btn">Explore Our Services <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://wa.me/254789697483" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fa-brands fa-whatsapp"></i> Chat With Us
+        </a>
+      </div>
+
+      <div class="trust-line">
+        <span><i class="fa-solid fa-check"></i> Clear prices</span>
+        <span><i class="fa-solid fa-check"></i> Simple ordering</span>
+        <span><i class="fa-solid fa-check"></i> Direct contact</span>
+      </div>
+
+      <div class="mini-stats">
+        <div class="mini-stat"><strong>02</strong><span>Main services</span></div>
+        <div class="mini-stat"><strong>Easy</strong><span>WhatsApp enquiries</span></div>
+        <div class="mini-stat"><strong>Online</strong><span>Order anytime</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85" alt="Person using digital technology" fetchpriority="high">
+      </div>
+      <div class="floating-card float-one">
+        <i class="fa-solid fa-headset"></i>
+        <strong>Tech Help</strong>
+        <span>Practical digital guidance</span>
+      </div>
+      <div class="floating-card float-two">
+        <i class="fa-solid fa-chart-line"></i>
+        <strong>Social Engagement</strong>
+        <span>Likes, followers and comments</span>
+      </div>
     </div>
   </div>
+</section>
 
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="#home" class="brand">
-        <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
-        <span>
-          SMART HUB
-          <small>SOLUTIONS</small>
-        </span>
-      </a>
+<section class="section services-section" id="services">
+  <div class="container">
+    <div class="eyebrow">What we offer</div>
+    <h2 class="section-heading">Two services. <span class="blue">One smart hub.</span></h2>
+    <p class="section-intro">Choose the service you need and follow the simple enquiry process.</p>
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#promotion">Packages</a>
-        <a href="#about">About</a>
-        <a href="#faq">FAQs</a>
-        <a class="btn btn-small" href="#services">Explore Services</a>
-      </nav>
+    <div class="service-grid">
+      <article class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>1. Tech Help & Account Guidance</h3>
+        <p>Get practical guidance for everyday technology problems, account issues and online safety concerns.</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Facebook login and profile problems</li>
+          <li><i class="fa-solid fa-check"></i> Hacked-account safety guidance</li>
+          <li><i class="fa-solid fa-check"></i> Account recovery guidance</li>
+          <li><i class="fa-solid fa-check"></i> Phone and app troubleshooting</li>
+          <li><i class="fa-solid fa-check"></i> Security settings and online safety</li>
+        </ul>
+        <div class="price-note">Guidance fee: KSh 178 per problem</div><br>
+        <a href="#problem-form" class="btn">Explain Your Problem <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>2. Social Media Engagement</h3>
+        <p>Request available likes, followers and comments for supported social media platforms. Select a package and send your order on WhatsApp.</p>
+        <div class="social-platforms" aria-label="Social media platforms">
+          <i class="fa-brands fa-facebook" title="Facebook"></i>
+          <i class="fa-brands fa-instagram" title="Instagram"></i>
+          <i class="fa-brands fa-tiktok" title="TikTok"></i>
+          <i class="fa-brands fa-x-twitter" title="X"></i>
+          <i class="fa-brands fa-youtube" title="YouTube"></i>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Post likes and engagement</li>
+          <li><i class="fa-solid fa-check"></i> Available follower packages</li>
+          <li><i class="fa-solid fa-check"></i> Comments and content promotion</li>
+          <li><i class="fa-solid fa-check"></i> WhatsApp order process</li>
+        </ul>
+        <div class="price-note">Packages start from KSh 200</div><br>
+        <a href="#promotion" class="btn">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow"><i class="fa-solid fa-bolt"></i> Smart solutions for everyday challenges</div>
-          <h1>Real problems.<br><span class="gold">Practical solutions.</span></h1>
-          <p>
-            Welcome to Smart Hub Solutions. Get practical technology guidance
-            and social media engagement services in one convenient place.
-            Choose the service you need and contact us directly.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#services" class="btn">
-              Explore Our Services <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="https://wa.me/254789697483" target="_blank" rel="noopener" class="btn btn-outline">
-              <i class="fa-brands fa-whatsapp"></i> Chat With Us
-            </a>
-          </div>
-
-          <div class="trust-line">
-            <span><i class="fa-solid fa-check"></i> Clear service prices</span>
-            <span><i class="fa-solid fa-check"></i> Convenient WhatsApp orders</span>
-            <span><i class="fa-solid fa-check"></i> Practical guidance</span>
-          </div>
-
-          <div class="mini-stats">
-            <div class="mini-stat">
-              <strong>02</strong>
-              <span>Main services</span>
-            </div>
-            <div class="mini-stat">
-              <strong>24/7</strong>
-              <span>Online enquiries</span>
-            </div>
-            <div class="mini-stat">
-              <strong>Direct</strong>
-              <span>WhatsApp contact</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-visual">
-          <div class="hero-image">
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85"
-              alt="Person using digital technology"
-              fetchpriority="high">
-          </div>
-
-          <div class="floating-card float-one">
-            <i class="fa-solid fa-laptop-code"></i>
-            <strong>Tech Help</strong>
-            <span>Guidance for digital problems</span>
-          </div>
-
-          <div class="floating-card float-two">
-            <i class="fa-solid fa-chart-line"></i>
-            <strong>Social Engagement</strong>
-            <span>Likes, followers and comments</span>
-          </div>
-        </div>
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="eyebrow">Simple process</div>
+    <h2 class="section-heading">How it <span class="blue">works</span></h2>
+    <p class="section-intro">Choose a service, submit your details and continue the conversation through WhatsApp.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">01</div>
+        <h3>Choose a service</h3>
+        <p>Select tech guidance or social media engagement.</p>
       </div>
-    </section>
-
-    <!-- ONLY TWO MAIN SERVICES -->
-    <section class="section services-section" id="services">
-      <div class="container">
-        <div class="eyebrow">What we offer</div>
-        <h2 class="section-heading">Two services. <span class="gold">One smart hub.</span></h2>
-        <p class="section-intro">
-          Select the service that matches your needs. Each service has its own
-          order or enquiry form so your request reaches us with the relevant details.
-        </p>
-
-        <div class="service-grid">
-          <!-- SERVICE 1 -->
-          <article class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-headset"></i>
-            </div>
-            <h3>1. Tech Help & Account Guidance</h3>
-            <p>
-              Get practical guidance for everyday technology challenges,
-              Facebook account issues and online safety concerns.
-            </p>
-
-            <ul>
-              <li><i class="fa-solid fa-check"></i> Facebook login and profile problems</li>
-              <li><i class="fa-solid fa-check"></i> Hacked-account safety guidance</li>
-              <li><i class="fa-solid fa-check"></i> Account recovery guidance</li>
-              <li><i class="fa-solid fa-check"></i> Phone and app troubleshooting</li>
-              <li><i class="fa-solid fa-check"></i> Security settings and online safety</li>
-            </ul>
-
-            <div class="price-note">Guidance fee: KSh 178 per problem</div>
-
-            <a href="#problem-form" class="btn">
-              Explain Your Problem <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </article>
-
-          <!-- SERVICE 2 -->
-          <article class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-chart-line"></i>
-            </div>
-            <h3>2. Social Media Engagement</h3>
-            <p>
-              Order available social media likes, followers and comments
-              for supported accounts. Choose a package and submit your
-              public post or profile link.
-            </p>
-
-            <div class="social-platforms" aria-label="Supported social media platforms">
-              <i class="fa-brands fa-facebook" title="Facebook"></i>
-              <i class="fa-brands fa-instagram" title="Instagram"></i>
-              <i class="fa-brands fa-tiktok" title="TikTok"></i>
-              <i class="fa-brands fa-x-twitter" title="X"></i>
-              <i class="fa-brands fa-youtube" title="YouTube"></i>
-            </div>
-
-            <ul>
-              <li><i class="fa-solid fa-check"></i> Post likes and engagement</li>
-              <li><i class="fa-solid fa-check"></i> Available follower packages</li>
-              <li><i class="fa-solid fa-check"></i> Comments and content promotion</li>
-              <li><i class="fa-solid fa-check"></i> Simple WhatsApp ordering</li>
-            </ul>
-
-            <div class="price-note">Packages start from KSh 200</div>
-
-            <a href="#promotion" class="btn">
-              View Packages & Order <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </article>
-        </div>
+      <div class="step-card">
+        <div class="step-number">02</div>
+        <h3>Submit your details</h3>
+        <p>Complete the relevant form with accurate information.</p>
       </div>
-    </section>
-
-    <section class="section" id="how-it-works">
-      <div class="container">
-        <div class="eyebrow">Simple process</div>
-        <h2 class="section-heading">How it <span class="gold">works</span></h2>
-        <p class="section-intro">
-          Send your request with the correct details, review the information
-          in WhatsApp and agree on the next step before any payment.
-        </p>
-
-        <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">01</div>
-            <h3>Choose a service</h3>
-            <p>Select tech guidance or social media engagement, depending on what you need.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">02</div>
-            <h3>Submit your details</h3>
-            <p>Complete the relevant form with your contact details and a clear description of your request.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">03</div>
-            <h3>Continue on WhatsApp</h3>
-            <p>Your prepared message opens in WhatsApp so you can review and send it to us.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOCIAL MEDIA ENGAGEMENT -->
-    <section class="section promotion-section" id="promotion">
-      <div class="container">
-        <div class="eyebrow">Service 02</div>
-        <h2 class="section-heading">Social Media <span class="gold">Engagement</span></h2>
-        <p class="section-intro">
-          Select a platform, choose the service and package, then provide the
-          public post or profile link. Your order will be prepared for WhatsApp.
-        </p>
-
-        <div class="promotion-layout">
-          <div class="promotion-copy">
-            <h3 style="font-size:1.45rem;margin-bottom:12px;">Choose your platform</h3>
-            <p class="muted">
-              Select the platform where you want to promote your post, page,
-              profile or content. Package availability can vary by platform.
-            </p>
-
-            <div class="platform-tabs" role="group" aria-label="Choose social media platform">
-              <button type="button" class="platform-tab active" data-platform="Facebook">
-                <i class="fa-brands fa-facebook"></i> Facebook
-              </button>
-              <button type="button" class="platform-tab" data-platform="Instagram">
-                <i class="fa-brands fa-instagram"></i> Instagram
-              </button>
-              <button type="button" class="platform-tab" data-platform="TikTok">
-                <i class="fa-brands fa-tiktok"></i> TikTok
-              </button>
-              <button type="button" class="platform-tab" data-platform="X">
-                <i class="fa-brands fa-x-twitter"></i> X
-              </button>
-              <button type="button" class="platform-tab" data-platform="YouTube">
-                <i class="fa-brands fa-youtube"></i> YouTube
-              </button>
-            </div>
-
-            <div class="notice">
-              <i class="fa-solid fa-shield-halved"></i>
-              Only submit public links and information needed for your order.
-              Never share your password, OTP or recovery codes.
-            </div>
-
-            <div class="notice">
-              <i class="fa-solid fa-circle-info"></i>
-              Prices are displayed below. Confirm availability, delivery
-              details and any platform-specific limitations with us before payment.
-            </div>
-          </div>
-
-          <div>
-            <div class="form-card">
-              <h3>Select your package</h3>
-              <p>Choose a package below. The selected service and price will appear in your order.</p>
-
-              <div class="package-group">
-                <h3><i class="fa-solid fa-heart gold"></i> Post Promotion</h3>
-                <div class="package-grid">
-                  <button type="button" class="package" data-service="Post Promotion" data-price="250" data-label="Starter post promotion">
-                    <strong>Starter</strong>
-                    <span>Post promotion</span>
-                    <div class="package-price">KSh 250</div>
-                  </button>
-                  <button type="button" class="package" data-service="Post Promotion" data-price="400" data-label="Standard post promotion">
-                    <strong>Standard</strong>
-                    <span>Post promotion</span>
-                    <div class="package-price">KSh 400</div>
-                  </button>
-                  <button type="button" class="package" data-service="Post Promotion" data-price="600" data-label="Advanced post promotion">
-                    <strong>Advanced</strong>
-                    <span>Post promotion</span>
-                    <div class="package-price">KSh 600</div>
-                  </button>
-                  <button type="button" class="package" data-service="Post Promotion" data-price="1000" data-label="Premium post promotion">
-                    <strong>Premium</strong>
-                    <span>Post promotion</span>
-                    <div class="package-price">KSh 1,000</div>
-                  </button>
-                </div>
-              </div>
-
-              <div class="package-group">
-                <h3><i class="fa-solid fa-user-group gold"></i> Page / Profile Promotion</h3>
-                <div class="package-grid">
-                  <button type="button" class="package" data-service="Page/Profile Promotion" data-price="200" data-label="Basic profile promotion">
-                    <strong>Basic</strong>
-                    <span>Page or profile</span>
-                    <div class="package-price">KSh 200</div>
-                  </button>
-                  <button type="button" class="package" data-service="Page/Profile Promotion" data-price="400" data-label="Plus profile promotion">
-                    <strong>Plus</strong>
-                    <span>Page or profile</span>
-                    <div class="package-price">KSh 400</div>
-                  </button>
-                </div>
-              </div>
-
-              <div class="package-group">
-                <h3><i class="fa-solid fa-comments gold"></i> Content / Comments Promotion</h3>
-                <div class="package-grid">
-                  <button type="button" class="package" data-service="Content/Comments Promotion" data-price="300" data-label="Starter content promotion">
-                    <strong>Starter</strong>
-                    <span>Content/comments</span>
-                    <div class="package-price">KSh 300</div>
-                  </button>
-                  <button type="button" class="package" data-service="Content/Comments Promotion" data-price="700" data-label="Standard content promotion">
-                    <strong>Standard</strong>
-                    <span>Content/comments</span>
-                    <div class="package-price">KSh 700</div>
-                  </button>
-                  <button type="button" class="package" data-service="Content/Comments Promotion" data-price="1000" data-label="Premium content promotion">
-                    <strong>Premium</strong>
-                    <span>Content/comments</span>
-                    <div class="package-price">KSh 1,000</div>
-                  </button>
-                </div>
-              </div>
-
-              <div class="selected-package" id="selected-package" aria-live="polite">
-                <strong><i class="fa-solid fa-circle-check"></i> No package selected yet</strong>
-                <div>Choose one of the packages above to continue.</div>
-              </div>
-
-              <form id="promotion-form">
-                <div class="form-grid">
-                  <div class="field">
-                    <label for="promo-name">Your name *</label>
-                    <input id="promo-name" name="name" required maxlength="80" placeholder="Enter your name">
-                  </div>
-
-                  <div class="field">
-                    <label for="promo-contact">Your phone number *</label>
-                    <input id="promo-contact" name="contact" required type="tel" maxlength="25" placeholder="e.g. 07XXXXXXXX">
-                  </div>
-
-                  <div class="field">
-                    <label for="promo-platform">Platform *</label>
-                    <select id="promo-platform" name="platform" required>
-                      <option value="Facebook">Facebook</option>
-                      <option value="Instagram">Instagram</option>
-                      <option value="TikTok">TikTok</option>
-                      <option value="X">X</option>
-                      <option value="YouTube">YouTube</option>
-                    </select>
-                  </div>
-
-                  <div class="field">
-                    <label for="promo-goal">What do you need? *</label>
-                    <select id="promo-goal" name="goal" required>
-                      <option value="">Choose service</option>
-                      <option>Likes</option>
-                      <option>Followers</option>
-                      <option>Comments</option>
-                      <option>Post promotion</option>
-                      <option>Page/profile promotion</option>
-                      <option>Content promotion</option>
-                      <option>Help choosing a service</option>
-                    </select>
-                  </div>
-
-                  <div class="field full">
-                    <label for="promo-url">Public post or profile link *</label>
-                    <input id="promo-url" name="url" type="url" required maxlength="500" placeholder="https://...">
-                  </div>
-
-                  <div class="field full">
-                    <label for="promo-notes">Additional details (optional)</label>
-                    <textarea id="promo-notes" name="notes" maxlength="1000" placeholder="Tell us what you would like promoted."></textarea>
-                  </div>
-                </div>
-
-                <label class="checkbox-line">
-                  <input type="checkbox" id="promo-consent" required>
-                  <span>I confirm the link is correct and understand that availability and delivery details must be confirmed before payment.</span>
-                </label>
-
-                <button class="btn btn-whatsapp" type="submit">
-                  <i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TECH HELP FORM -->
-    <section class="section" id="problem-form">
-      <div class="container">
-        <div class="eyebrow">Service 01</div>
-        <h2 class="section-heading">Explain your <span class="gold">problem</span></h2>
-        <p class="section-intro">
-          Describe the issue you are facing. Your details will be placed into
-          a WhatsApp message so you can review and send it to our team.
-        </p>
-
-        <div class="form-card" style="max-width:850px;">
-          <h3>Tech Help Application</h3>
-          <p>Guidance fee: KSh 178 per problem. We will discuss your request and next steps on WhatsApp.</p>
-
-          <form id="problem-application-form">
-            <div class="form-grid">
-              <div class="field">
-                <label for="problem-name">Your name *</label>
-                <input id="problem-name" name="name" required maxlength="80" placeholder="Enter your name">
-              </div>
-
-              <div class="field">
-                <label for="problem-contact">Your phone number *</label>
-                <input id="problem-contact" name="contact" required type="tel" maxlength="25" placeholder="e.g. 07XXXXXXXX">
-              </div>
-
-              <div class="field">
-                <label for="problem-platform">Platform or device *</label>
-                <select id="problem-platform" name="platform" required>
-                  <option value="">Choose one</option>
-                  <option>Facebook</option>
-                  <option>Instagram</option>
-                  <option>TikTok</option>
-                  <option>WhatsApp</option>
-                  <option>Google / Gmail</option>
-                  <option>Android phone</option>
-                  <option>Other app or website</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="problem-type">Problem type *</label>
-                <select id="problem-type" name="problem" required>
-                  <option value="">Choose a problem</option>
-                  <option>Cannot log in</option>
-                  <option>Account hacked or compromised</option>
-                  <option>Account recovery guidance</option>
-                  <option>Account restricted or disabled</option>
-                  <option>Security settings</option>
-                  <option>Phone or app error</option>
-                  <option>Other technology problem</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="problem-since">When did it start?</label>
-                <select id="problem-since" name="since">
-                  <option value="">Select if known</option>
-                  <option>Today</option>
-                  <option>1–3 days ago</option>
-                  <option>About a week ago</option>
-                  <option>More than a week ago</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="problem-error">Error message (optional)</label>
-                <input id="problem-error" name="error" maxlength="300" placeholder="Enter the error shown">
-              </div>
-
-              <div class="field full">
-                <label for="problem-description">Explain what happened *</label>
-                <textarea id="problem-description" name="description" required maxlength="1500" placeholder="Explain the problem and what you have tried so far."></textarea>
-              </div>
-            </div>
-
-            <div class="notice">
-              <i class="fa-solid fa-lock"></i>
-              Never enter or send your password, OTP, M-Pesa PIN, recovery codes
-              or other confidential security information.
-            </div>
-
-            <label class="checkbox-line">
-              <input type="checkbox" id="problem-consent" required>
-              <span>I agree to send my enquiry through WhatsApp and understand that Smart Hub Solutions provides guidance, not guaranteed account recovery.</span>
-            </label>
-
-            <button class="btn btn-whatsapp" type="submit">
-              <i class="fa-brands fa-whatsapp"></i> Send Problem on WhatsApp
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="about-image">
-          <img
-            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
-            alt="People working together on digital solutions"
-            loading="lazy">
-        </div>
-
-        <div>
-          <div class="eyebrow">About Smart Hub Solutions</div>
-          <h2 class="section-heading">Helping you move forward <span class="gold">with confidence.</span></h2>
-          <p class="muted">
-            Smart Hub Solutions helps people navigate everyday digital
-            challenges and access social media engagement services through
-            a straightforward enquiry process.
-          </p>
-
-          <div class="about-points">
-            <div class="about-point">
-              <i class="fa-solid fa-circle-check"></i>
-              <div>
-                <strong>Clear communication</strong>
-                <span>Explain your request and discuss the available next steps.</span>
-              </div>
-            </div>
-            <div class="about-point">
-              <i class="fa-solid fa-tags"></i>
-              <div>
-                <strong>Visible package prices</strong>
-                <span>Review listed prices before sending your order.</span>
-              </div>
-            </div>
-            <div class="about-point">
-              <i class="fa-brands fa-whatsapp"></i>
-              <div>
-                <strong>Easy WhatsApp contact</strong>
-                <span>Forms prepare a message for you to review and send.</span>
-              </div>
-            </div>
-            <div class="about-point">
-              <i class="fa-solid fa-shield-halved"></i>
-              <div>
-                <strong>Privacy awareness</strong>
-                <span>We do not ask you to submit account passwords, OTPs or M-Pesa PINs.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq" style="background:#091524;">
-      <div class="container">
-        <div class="eyebrow">Frequently asked questions</div>
-        <h2 class="section-heading">Need to know <span class="gold">more?</span></h2>
-        <p class="section-intro">Here are answers to common questions about our two services.</p>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              What services do you offer?
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <div class="faq-answer">
-              We offer two main services: technology and account guidance, plus
-              social media engagement packages for supported platforms.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              How much is tech guidance?
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <div class="faq-answer">
-              The listed guidance fee is KSh 178 per problem. Explain your issue
-              through the form so we can discuss your request.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              How do I order likes, followers or comments?
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <div class="faq-answer">
-              Select a platform and package, complete the engagement form with
-              a public post or profile link, then send the prepared message through WhatsApp.
-              Confirm availability and delivery details before payment.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              Do I need to provide my password?
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <div class="faq-answer">
-              No. Do not send passwords, OTPs, recovery codes or M-Pesa PINs.
-              Our forms request public links and details relevant to your enquiry.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              Is account recovery guaranteed?
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <div class="faq-answer">
-              No. The relevant platform controls account access and recovery decisions.
-              We can provide guidance, but cannot guarantee a platform's decision.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              Are social media results guaranteed?
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <div class="faq-answer">
-              Confirm the exact service, availability, expected delivery and any limitations
-              directly with us before paying. Platform rules and results may vary.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a href="#home" class="brand" style="margin-bottom:16px;">
-            <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
-            <span>SMART HUB<small>SOLUTIONS</small></span>
-          </a>
-          <p>
-            Your daily guide to solving technology problems and accessing
-            social media engagement services.
-          </p>
-        </div>
-
-        <div>
-          <h3>Our Services</h3>
-          <div class="footer-links">
-            <a href="#problem-form">Tech Help & Account Guidance</a>
-            <a href="#promotion">Social Media Engagement</a>
-            <a href="#how-it-works">How It Works</a>
-          </div>
-        </div>
-
-        <div>
-          <h3>Contact Us</h3>
-          <div class="footer-links">
-            <a href="https://wa.me/254789697483" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i> 0789697483
-            </a>
-            <a href="#faq">Frequently Asked Questions</a>
-            <a href="#about">About Smart Hub Solutions</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="notice">
-        <i class="fa-solid fa-circle-info"></i>
-        Smart Hub Solutions is an independent guidance and service provider.
-        We are not affiliated with or endorsed by Facebook, Instagram, TikTok,
-        X, YouTube or other platforms. Platform policies and decisions apply.
-      </div>
-
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> Smart Hub Solutions. All rights reserved.</span>
-        <span>Built for practical digital solutions.</span>
+      <div class="step-card">
+        <div class="step-number">03</div>
+        <h3>Continue on WhatsApp</h3>
+        <p>Review the prepared message and send it to our team.</p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Floating WhatsApp button -->
-  <a class="floating-whatsapp"
-     href="https://wa.me/254789697483"
-     target="_blank"
-     rel="noopener"
-     aria-label="Chat with Smart Hub Solutions on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+<section class="section promotion-section" id="promotion">
+  <div class="container">
+    <div class="eyebrow">Service 02</div>
+    <h2 class="section-heading">Social Media <span class="blue">Engagement</span></h2>
+    <p class="section-intro">Choose your platform and package, then provide your public post or profile link to prepare your WhatsApp order.</p>
 
-  <!-- GIDEON LA chatbot -->
-  <button class="chat-launcher" id="chat-launcher" type="button" aria-label="Open GIDEON LA assistant">
-    <i class="fa-solid fa-robot"></i>
-    <span>
-      <strong>GIDEON LA</strong>
-      <small>Smart Hub Assistant</small>
-    </span>
-  </button>
+    <div class="promotion-layout">
+      <div class="promotion-copy">
+        <h3>Choose your platform</h3>
+        <p class="muted">Select the platform where you want to promote your post, page, profile or content. Availability may vary by platform.</p>
 
-  <section class="chat-panel" id="chat-panel" aria-label="GIDEON LA chat assistant">
-    <div class="chat-header">
-      <div class="chat-title">
-        <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
-        <div>
-          <strong>GIDEON LA</strong>
-          <small><i class="fa-solid fa-circle"></i> Online demo assistant</small>
+        <div class="platform-tabs">
+          <button type="button" class="platform-tab active" data-platform="Facebook"><i class="fa-brands fa-facebook"></i> Facebook</button>
+          <button type="button" class="platform-tab" data-platform="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</button>
+          <button type="button" class="platform-tab" data-platform="TikTok"><i class="fa-brands fa-tiktok"></i> TikTok</button>
+          <button type="button" class="platform-tab" data-platform="X"><i class="fa-brands fa-x-twitter"></i> X</button>
+          <button type="button" class="platform-tab" data-platform="YouTube"><i class="fa-brands fa-youtube"></i> YouTube</button>
+        </div>
+
+        <div class="notice">
+          <i class="fa-solid fa-shield-halved"></i>
+          Only provide public links and details relevant to your order. Never share your password, OTP or recovery codes.
+        </div>
+        <div class="notice">
+          <i class="fa-solid fa-circle-info"></i>
+          Confirm availability, delivery details and any limitations before making payment.
         </div>
       </div>
-      <button class="chat-close" id="chat-close" type="button" aria-label="Close assistant">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </div>
 
-    <div class="chat-messages" id="chat-messages" aria-live="polite">
-      <div class="chat-message bot">
-        Hello! 👋 I am GIDEON LA, the Smart Hub demo assistant. What would you like help with? Choose a question below.
+      <div class="form-card">
+        <h3>Select your package</h3>
+        <p>Choose one package. Its name and price will be included in your WhatsApp order.</p>
+
+        <div class="package-group">
+          <h4><i class="fa-solid fa-heart blue"></i> Post Promotion</h4>
+          <div class="package-grid">
+            <button type="button" class="package" data-service="Post Promotion" data-price="250" data-label="Starter Post Promotion">
+              <strong>Starter</strong><span>Post promotion</span><div class="package-price">KSh 250</div>
+            </button>
+            <button type="button" class="package" data-service="Post Promotion" data-price="400" data-label="Standard Post Promotion">
+              <strong>Standard</strong><span>Post promotion</span><div class="package-price">KSh 400</div>
+            </button>
+            <button type="button" class="package" data-service="Post Promotion" data-price="600" data-label="Advanced Post Promotion">
+              <strong>Advanced</strong><span>Post promotion</span><div class="package-price">KSh 600</div>
+            </button>
+            <button type="button" class="package" data-service="Post Promotion" data-price="1000" data-label="Premium Post Promotion">
+              <strong>Premium</strong><span>Post promotion</span><div class="package-price">KSh 1,000</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="package-group">
+          <h4><i class="fa-solid fa-user-group blue"></i> Page / Profile Promotion</h4>
+          <div class="package-grid">
+            <button type="button" class="package" data-service="Page/Profile Promotion" data-price="200" data-label="Basic Page/Profile Promotion">
+              <strong>Basic</strong><span>Page or profile</span><div class="package-price">KSh 200</div>
+            </button>
+            <button type="button" class="package" data-service="Page/Profile Promotion" data-price="400" data-label="Plus Page/Profile Promotion">
+              <strong>Plus</strong><span>Page or profile</span><div class="package-price">KSh 400</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="package-group">
+          <h4><i class="fa-solid fa-comments blue"></i> Content / Comments Promotion</h4>
+          <div class="package-grid">
+            <button type="button" class="package" data-service="Content/Comments Promotion" data-price="300" data-label="Starter Content/Comments Promotion">
+              <strong>Starter</strong><span>Content/comments</span><div class="package-price">KSh 300</div>
+            </button>
+            <button type="button" class="package" data-service="Content/Comments Promotion" data-price="700" data-label="Standard Content/Comments Promotion">
+              <strong>Standard</strong><span>Content/comments</span><div class="package-price">KSh 700</div>
+            </button>
+            <button type="button" class="package" data-service="Content/Comments Promotion" data-price="1000" data-label="Premium Content/Comments Promotion">
+              <strong>Premium</strong><span>Content/comments</span><div class="package-price">KSh 1,000</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="selected-package" id="selected-package" aria-live="polite">
+          <strong><i class="fa-solid fa-circle-check"></i> No package selected</strong>
+          Choose one of the packages above.
+        </div>
+
+        <form id="promotion-form">
+          <div class="form-grid">
+            <div class="field">
+              <label for="promo-name">Your name *</label>
+              <input id="promo-name" required maxlength="80" placeholder="Enter your name">
+            </div>
+            <div class="field">
+              <label for="promo-contact">Phone number *</label>
+              <input id="promo-contact" type="tel" required maxlength="25" placeholder="07XXXXXXXX">
+            </div>
+            <div class="field">
+              <label for="promo-platform">Platform *</label>
+              <select id="promo-platform" required>
+                <option>Facebook</option><option>Instagram</option><option>TikTok</option><option>X</option><option>YouTube</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="promo-goal">Service needed *</label>
+              <select id="promo-goal" required>
+                <option value="">Choose service</option>
+                <option>Likes</option><option>Followers</option><option>Comments</option>
+                <option>Post promotion</option><option>Page/profile promotion</option>
+                <option>Content promotion</option><option>Help choosing a service</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="promo-url">Public post or profile link *</label>
+              <input id="promo-url" type="url" required maxlength="500" placeholder="https://...">
+            </div>
+            <div class="field full">
+              <label for="promo-notes">Additional details (optional)</label>
+              <textarea id="promo-notes" maxlength="1000" placeholder="Tell us what you need."></textarea>
+            </div>
+          </div>
+
+          <label class="checkbox-line">
+            <input type="checkbox" id="promo-consent" required>
+            <span>I confirm the link is correct and understand that service availability and delivery details must be confirmed before payment.</span>
+          </label>
+          <button class="btn btn-whatsapp" type="submit"><i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp</button>
+        </form>
       </div>
-      <div class="chat-typing" id="chat-typing" aria-label="Assistant is typing">
-        <span></span><span></span><span></span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="problem-form">
+  <div class="container">
+    <div class="eyebrow">Service 01</div>
+    <h2 class="section-heading">Explain your <span class="blue">problem</span></h2>
+    <p class="section-intro">Describe the technology issue you are facing. Your enquiry will be prepared as a WhatsApp message.</p>
+
+    <div class="form-card" style="max-width:850px;">
+      <h3>Tech Help Application</h3>
+      <p>Guidance fee: KSh 178 per problem. We will discuss your request and next steps on WhatsApp.</p>
+
+      <form id="problem-application-form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="problem-name">Your name *</label>
+            <input id="problem-name" required maxlength="80" placeholder="Enter your name">
+          </div>
+          <div class="field">
+            <label for="problem-contact">Phone number *</label>
+            <input id="problem-contact" type="tel" required maxlength="25" placeholder="07XXXXXXXX">
+          </div>
+          <div class="field">
+            <label for="problem-platform">Platform or device *</label>
+            <select id="problem-platform" required>
+              <option value="">Choose one</option>
+              <option>Facebook</option><option>Instagram</option><option>TikTok</option>
+              <option>WhatsApp</option><option>Google / Gmail</option>
+              <option>Android phone</option><option>Other app or website</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="problem-type">Problem type *</label>
+            <select id="problem-type" required>
+              <option value="">Choose a problem</option>
+              <option>Cannot log in</option><option>Account hacked or compromised</option>
+              <option>Account recovery guidance</option><option>Account restricted or disabled</option>
+              <option>Security settings</option><option>Phone or app error</option>
+              <option>Other technology problem</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="problem-since">When did it start?</label>
+            <select id="problem-since">
+              <option value="">Select if known</option><option>Today</option>
+              <option>1–3 days ago</option><option>About a week ago</option>
+              <option>More than a week ago</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="problem-error">Error message (optional)</label>
+            <input id="problem-error" maxlength="300" placeholder="Error shown on screen">
+          </div>
+          <div class="field full">
+            <label for="problem-description">Explain what happened *</label>
+            <textarea id="problem-description" required maxlength="1500" placeholder="Describe the problem and what you have tried."></textarea>
+          </div>
+        </div>
+
+        <div class="notice"><i class="fa-solid fa-lock"></i> Never share your password, OTP, recovery codes or M-Pesa PIN.</div>
+
+        <label class="checkbox-line">
+          <input type="checkbox" id="problem-consent" required>
+          <span>I agree to send my enquiry through WhatsApp and understand that account recovery is not guaranteed.</span>
+        </label>
+        <button class="btn btn-whatsapp" type="submit"><i class="fa-brands fa-whatsapp"></i> Send Problem on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85" alt="Team working together on digital solutions" loading="lazy">
+    </div>
+    <div>
+      <div class="eyebrow">About Smart Hub Solutions</div>
+      <h2 class="section-heading">Helping you move forward <span class="blue">with confidence.</span></h2>
+      <p class="muted">Smart Hub Solutions helps people navigate everyday digital challenges and access social media engagement services through a straightforward enquiry process.</p>
+
+      <div class="about-points">
+        <div class="about-point"><i class="fa-solid fa-circle-check"></i><div><strong>Clear communication</strong><span>Explain your request and discuss available next steps.</span></div></div>
+        <div class="about-point"><i class="fa-solid fa-tags"></i><div><strong>Visible package prices</strong><span>Review the listed prices before sending your order.</span></div></div>
+        <div class="about-point"><i class="fa-brands fa-whatsapp"></i><div><strong>Easy WhatsApp contact</strong><span>Forms prepare messages for you to review and send.</span></div></div>
+        <div class="about-point"><i class="fa-solid fa-shield-halved"></i><div><strong>Privacy awareness</strong><span>We do not ask you to submit passwords, OTPs or M-Pesa PINs.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <div class="eyebrow">Frequently asked questions</div>
+    <h2 class="section-heading">Need to know <span class="blue">more?</span></h2>
+    <p class="section-intro">Answers to common questions about our two services.</p>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" type="button">What services do you offer? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">We offer tech help and account guidance, plus social media engagement services including available likes, followers, comments and promotion packages.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">How much is tech guidance? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">The listed guidance fee is KSh 178 per problem. Send your enquiry through the form to discuss your issue.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">How do I order social media engagement? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">Choose a platform and package, enter your public post or profile link, complete the form and send your order through WhatsApp.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">Do I need to provide my password? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">No. Never share passwords, OTPs, recovery codes or M-Pesa PINs. Submit public links and the details needed for your enquiry.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">Is account recovery guaranteed? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">No. The platform controls account access and recovery decisions. We can provide guidance but cannot guarantee its decision.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">Are social media results guaranteed? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">Confirm availability, delivery expectations and limitations directly with us before payment. Platform policies and results may vary.</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="brand" style="margin-bottom:15px">
+          <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+          <span>SMART HUB<small>SOLUTIONS</small></span>
+        </a>
+        <p>Your daily guide to solving technology problems and accessing social media engagement services.</p>
+      </div>
+      <div>
+        <h3>Our Services</h3>
+        <div class="footer-links">
+          <a href="#problem-form">Tech Help & Account Guidance</a>
+          <a href="#promotion">Social Media Engagement</a>
+          <a href="#how-it-works">How It Works</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <div class="footer-links">
+          <a href="https://wa.me/254789697483" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> 0789697483</a>
+          <a href="#faq">Frequently Asked Questions</a>
+          <a href="#about">About Smart Hub Solutions</a>
+        </div>
       </div>
     </div>
 
-    <div class="chat-quick" id="chat-quick">
-      <button class="quick-question" data-question="What services do you offer?">Our services</button>
-      <button class="quick-question" data-question="How much is tech guidance?">Tech help price</button>
-      <button class="quick-question" data-question="How do I order likes?">Order likes</button>
-      <button class="quick-question" data-question="How do I order followers?">Order followers</button>
-      <button class="quick-question" data-question="How do I order comments?">Order comments</button>
-      <button class="quick-question" data-question="How do I pay?">Payment process</button>
-      <button class="quick-question" data-question="Do you need my password?">Account safety</button>
-      <button class="quick-question" data-question="Can you recover my Facebook account?">Facebook recovery</button>
-      <button class="quick-question" data-question="What is the cheapest package?">Cheapest package</button>
-      <button class="quick-question" data-question="How do I contact you?">Contact</button>
-      <button class="quick-question" data-question="Do you offer Instagram services?">Instagram</button>
-      <button class="quick-question" data-question="Do you offer TikTok services?">TikTok</button>
-      <button class="quick-question" data-question="Do you offer YouTube services?">YouTube</button>
-      <button class="quick-question" data-question="Are results guaranteed?">Results</button>
-      <button class="quick-question" data-question="How do I place an order?">Place an order</button>
+    <div class="notice">
+      <i class="fa-solid fa-circle-info"></i>
+      Smart Hub Solutions is an independent service provider, not affiliated with or endorsed by Facebook, Instagram, TikTok, X or YouTube. Platform policies and decisions apply.
     </div>
-  </section>
 
-  <script>
-    "use strict";
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Smart Hub Solutions. All rights reserved.</span>
+      <span>Practical digital solutions.</span>
+    </div>
+  </div>
+</footer>
 
-    // WhatsApp number in international format without the plus sign.
-    const WHATSAPP_NUMBER = "254789697483";
+<a class="floating-whatsapp" href="https://wa.me/254789697483" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
-    // Keep this list aligned with the prices shown on the page.
-    const packageDetails = {
-      "250": "Starter Post Promotion — KSh 250",
-      "400": "Standard Post Promotion / Plus Profile Promotion — KSh 400",
-      "600": "Advanced Post Promotion — KSh 600",
-      "1000": "Premium Post Promotion / Premium Content Promotion — KSh 1,000",
-      "200": "Basic Page/Profile Promotion — KSh 200",
-      "300": "Starter Content/Comments Promotion — KSh 300",
-      "700": "Standard Content/Comments Promotion — KSh 700"
+<!-- GIDEON LA chatbot -->
+<button class="chat-launcher" id="chat-launcher" type="button" aria-label="Open GIDEON LA assistant">
+  <i class="fa-solid fa-robot"></i>
+  <span><strong>GIDEON LA</strong><small>Smart Hub Assistant</small></span>
+</button>
+
+<section class="chat-panel" id="chat-panel" aria-label="GIDEON LA chat assistant">
+  <div class="chat-header">
+    <div class="chat-title">
+      <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+      <div><strong>GIDEON LA</strong><small>Smart Hub Assistant</small></div>
+    </div>
+    <button class="chat-close" id="chat-close" type="button" aria-label="Close assistant"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="chat-messages" id="chat-messages" aria-live="polite">
+    <div class="chat-message bot">Hello! 👋 I am GIDEON LA, the Smart Hub demo assistant. Choose a question below to get started.</div>
+    <div class="chat-typing" id="chat-typing"><span></span><span></span><span></span></div>
+  </div>
+  <div class="chat-quick" id="chat-quick">
+    <button class="quick-question" data-question="What services do you offer?">Our services</button>
+    <button class="quick-question" data-question="How much is tech guidance?">Tech help price</button>
+    <button class="quick-question" data-question="How do I order likes?">Order likes</button>
+    <button class="quick-question" data-question="How do I order followers?">Order followers</button>
+    <button class="quick-question" data-question="How do I order comments?">Order comments</button>
+    <button class="quick-question" data-question="How do I pay?">Payment process</button>
+    <button class="quick-question" data-question="Do you need my password?">Account safety</button>
+    <button class="quick-question" data-question="Can you recover my Facebook account?">Facebook recovery</button>
+    <button class="quick-question" data-question="What is the cheapest package?">Cheapest package</button>
+    <button class="quick-question" data-question="How do I contact you?">Contact</button>
+    <button class="quick-question" data-question="Do you offer Instagram services?">Instagram</button>
+    <button class="quick-question" data-question="Do you offer TikTok services?">TikTok</button>
+    <button class="quick-question" data-question="Do you offer YouTube services?">YouTube</button>
+    <button class="quick-question" data-question="Are results guaranteed?">Results</button>
+    <button class="quick-question" data-question="How do I place an order?">Place an order</button>
+  </div>
+</section>
+
+<script>
+"use strict";
+
+const WHATSAPP_NUMBER = "254789697483";
+let chosenPackage = null;
+
+function openWhatsApp(message) {
+  const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* Platform selection */
+const platformSelect = document.getElementById("promo-platform");
+const platformTabs = document.querySelectorAll(".platform-tab");
+
+platformTabs.forEach(function(tab) {
+  tab.addEventListener("click", function() {
+    platformTabs.forEach(function(item) {
+      item.classList.remove("active");
+    });
+    tab.classList.add("active");
+    platformSelect.value = tab.dataset.platform;
+  });
+});
+
+platformSelect.addEventListener("change", function() {
+  platformTabs.forEach(function(tab) {
+    tab.classList.toggle("active", tab.dataset.platform === platformSelect.value);
+  });
+});
+
+/* Package selection */
+const packageButtons = document.querySelectorAll(".package");
+const selectedPackageBox = document.getElementById("selected-package");
+const goalSelect = document.getElementById("promo-goal");
+
+packageButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    packageButtons.forEach(function(item) {
+      item.classList.remove("selected");
+    });
+
+    button.classList.add("selected");
+
+    chosenPackage = {
+      service: button.dataset.service,
+      price: button.dataset.price,
+      label: button.dataset.label
     };
 
-    let chosenPackage = null;
-    let chosenPlatform = "Facebook";
+    selectedPackageBox.replaceChildren();
 
-    function openWhatsApp(message) {
-      const url = "https://wa.me/" + WHATSAPP_NUMBER +
-        "?text=" + encodeURIComponent(message);
+    const title = document.createElement("strong");
+    title.textContent = "✓ Selected package";
 
-      window.open(url, "_blank", "noopener,noreferrer");
+    const details = document.createElement("div");
+    details.textContent = chosenPackage.label + " — KSh " +
+      Number(chosenPackage.price).toLocaleString("en-KE");
+
+    selectedPackageBox.append(title, details);
+
+    if (chosenPackage.service === "Page/Profile Promotion") {
+      goalSelect.value = "Page/profile promotion";
+    } else if (chosenPackage.service === "Content/Comments Promotion") {
+      goalSelect.value = "Content promotion";
+    } else {
+      goalSelect.value = "Post promotion";
     }
+  });
+});
 
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
+/* Social media order form */
+document.getElementById("promotion-form").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-    // Platform tabs
-    const platformSelect = document.getElementById("promo-platform");
-    const platformTabs = document.querySelectorAll(".platform-tab");
+  if (!chosenPackage) {
+    alert("Please select a package first.");
+    return;
+  }
 
-    platformTabs.forEach(function(tab) {
-      tab.addEventListener("click", function() {
-        platformTabs.forEach(function(item) {
-          item.classList.remove("active");
-        });
+  const name = document.getElementById("promo-name").value.trim();
+  const contact = document.getElementById("promo-contact").value.trim();
+  const platform = platformSelect.value;
+  const goal = goalSelect.value;
+  const url = document.getElementById("promo-url").value.trim();
+  const notes = document.getElementById("promo-notes").value.trim();
 
-        tab.classList.add("active");
-        chosenPlatform = tab.dataset.platform;
-        platformSelect.value = chosenPlatform;
-      });
+  if (!name || !contact || !platform || !goal || !url) {
+    alert("Please complete all required fields.");
+    return;
+  }
+
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(url);
+  } catch (error) {
+    alert("Please enter a valid public post or profile link.");
+    return;
+  }
+
+  if (!["https:", "http:"].includes(parsedUrl.protocol)) {
+    alert("Please use a valid link beginning with https:// or http://");
+    return;
+  }
+
+  const message =
+    "HELLO SMART HUB SOLUTIONS — SOCIAL MEDIA ENGAGEMENT ORDER\n\n" +
+    "Name: " + name + "\n" +
+    "Contact: " + contact + "\n" +
+    "Platform: " + platform + "\n" +
+    "Service requested: " + goal + "\n" +
+    "Selected package: " + chosenPackage.label + "\n" +
+    "Package category: " + chosenPackage.service + "\n" +
+    "Listed price: KSh " + Number(chosenPackage.price).toLocaleString("en-KE") + "\n" +
+    "Public post/profile link: " + url + "\n" +
+    "Additional details: " + (notes || "None provided") + "\n\n" +
+    "Please confirm availability, delivery details and any limitations before payment.";
+
+  openWhatsApp(message);
+});
+
+/* Tech help form */
+document.getElementById("problem-application-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("problem-name").value.trim();
+  const contact = document.getElementById("problem-contact").value.trim();
+  const platform = document.getElementById("problem-platform").value;
+  const problem = document.getElementById("problem-type").value;
+  const since = document.getElementById("problem-since").value;
+  const errorText = document.getElementById("problem-error").value.trim();
+  const description = document.getElementById("problem-description").value.trim();
+
+  if (!name || !contact || !platform || !problem || !description) {
+    alert("Please complete all required fields.");
+    return;
+  }
+
+  const message =
+    "HELLO SMART HUB SOLUTIONS — TECH HELP ENQUIRY\n\n" +
+    "Name: " + name + "\n" +
+    "Contact: " + contact + "\n" +
+    "Platform/device: " + platform + "\n" +
+    "Problem: " + problem + "\n" +
+    "When it started: " + (since || "Not specified") + "\n" +
+    "Error message: " + (errorText || "None provided") + "\n" +
+    "Problem description: " + description + "\n\n" +
+    "Listed guidance fee: KSh 178 per problem.\n" +
+    "Please advise me on the next steps.";
+
+  openWhatsApp(message);
+});
+
+/* FAQ accordion */
+document.querySelectorAll(".faq-question").forEach(function(button) {
+  button.addEventListener("click", function() {
+    const item = button.closest(".faq-item");
+    const wasOpen = item.classList.contains("open");
+
+    document.querySelectorAll(".faq-item").forEach(function(other) {
+      other.classList.remove("open");
     });
 
-    platformSelect.addEventListener("change", function() {
-      chosenPlatform = platformSelect.value;
+    if (!wasOpen) item.classList.add("open");
+  });
+});
 
-      platformTabs.forEach(function(tab) {
-        tab.classList.toggle("active", tab.dataset.platform === chosenPlatform);
-      });
-    });
+/* GIDEON LA scripted demo assistant */
+const chatLauncher = document.getElementById("chat-launcher");
+const chatPanel = document.getElementById("chat-panel");
+const chatClose = document.getElementById("chat-close");
+const chatMessages = document.getElementById("chat-messages");
+const chatTyping = document.getElementById("chat-typing");
+const chatQuick = document.getElementById("chat-quick");
 
-    // Package selection
-    const packageButtons = document.querySelectorAll(".package");
-    const selectedPackageBox = document.getElementById("selected-package");
+chatLauncher.addEventListener("click", function() {
+  chatPanel.classList.toggle("open");
+});
 
-    packageButtons.forEach(function(button) {
-      button.addEventListener("click", function() {
-        packageButtons.forEach(function(item) {
-          item.classList.remove("selected");
-        });
+chatClose.addEventListener("click", function() {
+  chatPanel.classList.remove("open");
+});
 
-        button.classList.add("selected");
+const chatbotAnswers = [
+  {
+    keywords: ["service", "offer"],
+    answer: "We offer two main services:\n1. Tech Help & Account Guidance — KSh 178 per problem.\n2. Social Media Engagement — available likes, followers, comments and promotion packages."
+  },
+  {
+    keywords: ["178", "tech help price", "guidance price", "cost of tech"],
+    answer: "Our listed tech guidance fee is KSh 178 per problem. Complete the Tech Help Application form and send the prepared WhatsApp message."
+  },
+  {
+    keywords: ["like", "likes"],
+    answer: "To request likes, open Social Media Engagement, select your platform and an available package, then provide your public post link. Confirm availability before payment."
+  },
+  {
+    keywords: ["follower", "followers"],
+    answer: "For followers, select the platform and an available profile promotion option. Submit your public profile link and confirm the service details with us before payment."
+  },
+  {
+    keywords: ["comment", "comments"],
+    answer: "Content/Comments Promotion packages are listed at KSh 300, KSh 700 and KSh 1,000. Select a package and submit your public post link."
+  },
+  {
+    keywords: ["pay", "payment", "mpesa", "m-pesa"],
+    answer: "First send your enquiry on WhatsApp and confirm the service, price, availability and delivery details. Follow the payment instructions agreed with us. Never share your M-Pesa PIN or OTP."
+  },
+  {
+    keywords: ["password", "otp", "pin", "security", "safe"],
+    answer: "Never share your password, OTP, recovery codes or M-Pesa PIN. For social media orders, submit your public post or profile link and only the details relevant to your request."
+  },
+  {
+    keywords: ["recover", "hacked", "facebook account", "disabled", "login"],
+    answer: "We can provide account safety and recovery guidance, but only the platform can decide whether to restore access. Use the official recovery process and never share your password or recovery codes."
+  },
+  {
+    keywords: ["cheapest", "lowest", "cheap", "200"],
+    answer: "The lowest listed package is Basic Page/Profile Promotion at KSh 200. Select it in the Social Media Engagement section and confirm availability before payment."
+  },
+  {
+    keywords: ["contact", "whatsapp", "number", "reach"],
+    answer: "Contact Smart Hub Solutions on WhatsApp at 0789697483. Tap a WhatsApp button on this website to start a chat."
+  },
+  {
+    keywords: ["instagram"],
+    answer: "Instagram is listed as a supported platform option. Select it in the engagement section, choose a package and provide your public profile or post link."
+  },
+  {
+    keywords: ["tiktok"],
+    answer: "TikTok is listed as a platform option. Select TikTok, choose an available package and submit your public link. Confirm availability before paying."
+  },
+  {
+    keywords: ["youtube"],
+    answer: "YouTube is listed in the platform selector. Submit your request using the engagement form and confirm that your requested service is available before payment."
+  },
+  {
+    keywords: ["guarantee", "guaranteed", "results", "delivery"],
+    answer: "Please confirm availability, delivery expectations and limitations with us before payment. Platform rules and results may vary, so results should not be assumed to be guaranteed."
+  },
+  {
+    keywords: ["order", "buy", "package", "place an order"],
+    answer: "To order:\n1. Open Social Media Engagement.\n2. Select a platform and package.\n3. Enter your contact details and public link.\n4. Tap Send Order on WhatsApp.\n5. Confirm details with us before payment."
+  }
+];
 
-        chosenPackage = {
-          service: button.dataset.service,
-          price: button.dataset.price,
-          label: button.dataset.label
-        };
+function addChatMessage(messageText, sender) {
+  const message = document.createElement("div");
+  message.className = "chat-message " + sender;
+  message.textContent = messageText;
+  chatMessages.insertBefore(message, chatTyping);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
 
-        selectedPackageBox.innerHTML =
-          "<strong><i class='fa-solid fa-circle-check'></i> Selected package</strong>" +
-          "<div>" + chosenPackage.label + " — KSh " +
-          Number(chosenPackage.price).toLocaleString("en-KE") +
-          "</div>";
+function getChatAnswer(question) {
+  const query = question.toLowerCase();
 
-        const goal = document.getElementById("promo-goal");
-
-        if (chosenPackage.service === "Page/Profile Promotion") {
-          goal.value = "Page/profile promotion";
-        } else if (chosenPackage.service === "Content/Comments Promotion") {
-          goal.value = "Content promotion";
-        } else {
-          goal.value = "Post promotion";
-        }
-      });
-    });
-
-    // Social media order form
-    document.getElementById("promotion-form").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      if (!chosenPackage) {
-        alert("Mkuu, please choose a package before sending your order.");
-        document.querySelector(".package-group").scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-        return;
-      }
-
-      const name = document.getElementById("promo-name").value.trim();
-      const contact = document.getElementById("promo-contact").value.trim();
-      const platform = platformSelect.value;
-      const goal = document.getElementById("promo-goal").value;
-      const url = document.getElementById("promo-url").value.trim();
-      const notes = document.getElementById("promo-notes").value.trim();
-
-      if (!name || !contact || !platform || !goal || !url) {
-        alert("Please complete all required fields.");
-        return;
-      }
-
-      let parsedUrl;
-
-      try {
-        parsedUrl = new URL(url);
-      } catch (error) {
-        alert("Please enter a valid public post or profile URL.");
-        return;
-      }
-
-      if (!["http:", "https:"].includes(parsedUrl.protocol)) {
-        alert("Please use a valid URL beginning with https:// or http://");
-        return;
-      }
-
-      const message =
-        "HELLO SMART HUB SOLUTIONS — SOCIAL MEDIA ENGAGEMENT ORDER\n\n" +
-        "Name: " + name + "\n" +
-        "Contact: " + contact + "\n" +
-        "Platform: " + platform + "\n" +
-        "Service requested: " + goal + "\n" +
-        "Selected package: " + chosenPackage.label + "\n" +
-        "Package category: " + chosenPackage.service + "\n" +
-        "Listed price: KSh " + Number(chosenPackage.price).toLocaleString("en-KE") + "\n" +
-        "Public post/profile link: " + url + "\n" +
-        "Additional details: " + (notes || "None provided") + "\n\n" +
-        "Please confirm availability, expected delivery and any limitations before payment.";
-
-      openWhatsApp(message);
-    });
-
-    // Tech help enquiry form
-    document.getElementById("problem-application-form").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("problem-name").value.trim();
-      const contact = document.getElementById("problem-contact").value.trim();
-      const platform = document.getElementById("problem-platform").value;
-      const problem = document.getElementById("problem-type").value;
-      const since = document.getElementById("problem-since").value;
-      const errorText = document.getElementById("problem-error").value.trim();
-      const description = document.getElementById("problem-description").value.trim();
-
-      if (!name || !contact || !platform || !problem || !description) {
-        alert("Please complete all required fields.");
-        return;
-      }
-
-      const message =
-        "HELLO SMART HUB SOLUTIONS — TECH HELP ENQUIRY\n\n" +
-        "Name: " + name + "\n" +
-        "Contact: " + contact + "\n" +
-        "Platform/device: " + platform + "\n" +
-        "Problem: " + problem + "\n" +
-        "When it started: " + (since || "Not specified") + "\n" +
-        "Error message: " + (errorText || "None provided") + "\n" +
-        "Problem description: " + description + "\n\n" +
-        "Listed guidance fee: KSh 178 per problem.\n" +
-        "Please advise me on the next steps.";
-
-      openWhatsApp(message);
-    });
-
-    // FAQ accordion
-    document.querySelectorAll(".faq-question").forEach(function(button) {
-      button.addEventListener("click", function() {
-        const item = button.closest(".faq-item");
-        const isOpen = item.classList.contains("open");
-
-        document.querySelectorAll(".faq-item").forEach(function(faq) {
-          faq.classList.remove("open");
-        });
-
-        if (!isOpen) {
-          item.classList.add("open");
-        }
-      });
-    });
-
-    // GIDEON LA scripted demo assistant.
-    // This is a local scripted chatbot, not a live AI connection.
-    const chatLauncher = document.getElementById("chat-launcher");
-    const chatPanel = document.getElementById("chat-panel");
-    const chatClose = document.getElementById("chat-close");
-    const chatMessages = document.getElementById("chat-messages");
-    const chatTyping = document.getElementById("chat-typing");
-    const chatQuick = document.getElementById("chat-quick");
-
-    chatLauncher.addEventListener("click", function() {
-      chatPanel.classList.toggle("open");
-    });
-
-    chatClose.addEventListener("click", function() {
-      chatPanel.classList.remove("open");
-    });
-
-    const chatbotAnswers = [
-      {
-        keywords: ["service", "offer", "do you do"],
-        answer: "Smart Hub Solutions has two main services:\n1. Tech help and account guidance — KSh 178 per problem.\n2. Social media engagement — likes, followers, comments and listed promotion packages.\nChoose a service on the website to continue."
-      },
-      {
-        keywords: ["178", "tech help price", "guidance price", "cost of tech"],
-        answer: "Our listed tech guidance fee is KSh 178 per problem. Complete the Tech Help Application form and send the prepared WhatsApp message to discuss your issue."
-      },
-      {
-        keywords: ["like", "likes"],
-        answer: "You can request likes through our Social Media Engagement service. Choose a platform, select an available package, add your public post link and send your order through WhatsApp."
-      },
-      {
-        keywords: ["follower", "followers"],
-        answer: "For follower-related requests, use the Social Media Engagement form. Select your platform and profile promotion option, provide the public profile link, and confirm availability with us before payment."
-      },
-      {
-        keywords: ["comment", "comments"],
-        answer: "We list Content/Comments Promotion packages at KSh 300, KSh 700 and KSh 1,000. Select the package and submit your public post link. Confirm what is available before payment."
-      },
-      {
-        keywords: ["pay", "payment", "mpesa", "m-pesa"],
-        answer: "First send your enquiry through WhatsApp and confirm the service, price, availability and delivery details. Follow the payment instructions agreed directly with us. Never share your M-Pesa PIN or OTP."
-      },
-      {
-        keywords: ["password", "otp", "pin", "safe", "security"],
-        answer: "Never share your password, OTP, recovery codes or M-Pesa PIN with anyone. For social media orders, submit a public post or profile link and the information needed for your request."
-      },
-      {
-        keywords: ["recover", "hacked", "facebook account", "disabled", "login"],
-        answer: "We can provide practical account safety and recovery guidance, but only the platform can decide whether to restore access. Use the official account recovery process and never give your password or recovery codes to a third party."
-      },
-      {
-        keywords: ["cheapest", "lowest", "cheap", "200"],
-        answer: "The lowest listed social media package is Page/Profile Promotion at KSh 200. Select it in the Social Media Engagement section and confirm availability before payment."
-      },
-      {
-        keywords: ["contact", "whatsapp", "number", "reach"],
-        answer: "You can contact Smart Hub Solutions on WhatsApp at 0789697483. Tap a WhatsApp button on the website to open a prepared message or start a chat."
-      },
-      {
-        keywords: ["instagram"],
-        answer: "Instagram is listed among the social media platforms. Select Instagram in the engagement section, choose your package and submit a public profile or post link. Confirm service availability before paying."
-      },
-      {
-        keywords: ["tiktok"],
-        answer: "TikTok is listed among the social media platforms. Select TikTok, choose an available package and submit your public link. Please confirm availability and delivery details first."
-      },
-      {
-        keywords: ["youtube"],
-        answer: "YouTube is listed in the platform selector. Tell us what kind of engagement you need using the order form, and confirm that the requested service is available before payment."
-      },
-      {
-        keywords: ["guarantee", "guaranteed", "results", "delivery"],
-        answer: "We ask customers to confirm availability, delivery expectations and limitations before payment. Platform policies and activity can change, so results should not be assumed to be guaranteed."
-      },
-      {
-        keywords: ["order", "place an order", "buy", "package"],
-        answer: "To place an order:\n1. Open Social Media Engagement.\n2. Select a platform and package.\n3. Enter your name, contact and public post/profile link.\n4. Tap Send Order on WhatsApp.\n5. Confirm the details with us before payment."
-      }
-    ];
-
-    function addChatMessage(text, sender) {
-      const message = document.createElement("div");
-      message.className = "chat-message " + sender;
-      message.textContent = text;
-      chatMessages.insertBefore(message, chatTyping);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
+  for (const item of chatbotAnswers) {
+    if (item.keywords.some(function(keyword) {
+      return query.includes(keyword);
+    })) {
+      return item.answer;
     }
+  }
 
-    function getChatAnswer(question) {
-      const q = question.toLowerCase();
+  return "Thanks for your question! I can help with tech/account guidance and social media engagement. Choose one of the questions below or contact us on WhatsApp at 0789697483.";
+}
 
-      for (const item of chatbotAnswers) {
-        if (item.keywords.some(function(keyword) {
-          return q.includes(keyword);
-        })) {
-          return item.answer;
-        }
-      }
+let chatBusy = false;
 
-      return "Thanks for your question! I can help with our two services: tech/account guidance and social media engagement. Choose one of the quick questions or contact our team on WhatsApp at 0789697483 for further help.";
-    }
+function askChatbot(question) {
+  if (chatBusy) return;
 
-    let chatBusy = false;
+  chatBusy = true;
+  addChatMessage(question, "user");
+  chatTyping.classList.add("show");
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    function askChatbot(question) {
-      if (chatBusy) return;
+  window.setTimeout(function() {
+    chatTyping.classList.remove("show");
+    addChatMessage(getChatAnswer(question), "bot");
+    chatBusy = false;
+  }, 1100);
+}
 
-      chatBusy = true;
-      addChatMessage(question, "user");
-      chatTyping.classList.add("show");
-      chatMessages.scrollTop = chatMessages.scrollHeight;
+chatQuick.querySelectorAll(".quick-question").forEach(function(button) {
+  button.addEventListener("click", function() {
+    askChatbot(button.dataset.question);
+  });
+});
+</script>
 
-      window.setTimeout(function() {
-        chatTyping.classList.remove("show");
-        addChatMessage(getChatAnswer(question), "bot");
-        chatBusy = false;
-      }, 1000 + Math.floor(Math.random() * 900));
-    }
-
-    chatQuick.querySelectorAll(".quick-question").forEach(function(button) {
-      button.addEventListener("click", function() {
-        askChatbot(button.dataset.question);
-      });
-    });
-  </script>
 </body>
 </html>
